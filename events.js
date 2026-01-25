@@ -1,0 +1,344 @@
+
+  /*
+{
+  titel: "",
+  datum: "YYYY-MM-DD",
+  zeit: "XX:XX-XX:XX",
+  ort: "",
+  beschr: "",
+  link: "",
+  kosten: "",
+  veranstalter: "",
+  kontakt: ""
+}
+*/
+
+window.EVENTS = [ 
+    {
+  titel: "Religion – Natur, Landschaft und Wandern",
+  referent: "Prof. Dr. Jürgen Mohn",
+  datum: "2023-11-07",
+  zeit: "18:15–20:00",
+  ort: "Kollegienhaus, Universität Basel",
+  beschr: "Vortragsreihe von Prof. Dr. Jürgen Mohn. Anmeldung über die Volkshochschule beider Basel. Kurskosten CHF 100.–; alle Daten: 07.11.23 / 14.11.23 / 21.11.23 / 28.11.23",
+  link: "https://www.vhsbb.ch",
+  kosten: "CHF 100",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@vhsbb.ch"
+},
+{
+  titel: "Gehen",
+  datum: "2023-11-22",
+  zeit: "12:30–13:30",
+  ort: "Merian Gärten",
+  beschr: "Adaption fürs Gehen von Thomas Bernhards Text «Gehen».",
+  link: "https://gehstück.ch",
+  kosten: "Kollekte",
+  veranstalter: "Léonard Wiesendanger",
+  kontakt: "info@gehstueck.ch"
+},
+{
+  titel: "Träumereien eines einsamen Spaziergängers",
+  datum: "2024-02-23",
+  zeit: "14:00–15:00",
+  ort: "Ermitage Arlesheim",
+  beschr: "Adaption fürs Gehen von Jean-Jacques Rousseaus Text «Träumereien eines einsamen Spaziergängers».",
+  link: "https://gehstück.ch",
+  kosten: "Kollekte",
+  veranstalter: "Léonard Wiesendanger",
+  kontakt: "info@gehstueck.ch"
+},
+{
+  titel: "Auch ich habe in Arkadien gelebt",
+  datum: "2024-04-05",
+  zeit: "18:00–19:00",
+  ort: "Merian Gärten",
+  beschr: "Adaption fürs Gehen von Ingeborg Bachmanns Text «Auch ich habe in Arkadien gelebt».",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@gehstueck.ch"
+},
+{
+  titel: "Landschaft ist darstellbar / nicht",
+  datum: "2024-04-21",
+  zeit: "14:00–17:00",
+  ort: "Ermitage Arlesheim",
+  beschr: "Promenadologie. Kann man den schönsten Ort beschreiben? Welche Landschaft ist darstellbar und welche nicht? U. a. am Beispiel von Caspar David Friedrich. Wissenschaftsspaziergang nach Lucius und Annemarie Burckhardt mit Inputs, ästhetischen Interventionen, Zeit zur Diskussion und Raum zur Wahrnehmung.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Grenzgang",
+  referent: "Victor Saudan",
+  datum: "2024-05-12",
+  zeit: "16:00–17:30",
+  ort: "Rodersdorf",
+  beschr: "",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Der Spaziergang",
+  datum: "2024-05-31",
+  zeit: "18:00–19:00",
+  ort: "Merian Gärten",
+  beschr: "Adaption fürs Gehen von Robert Walser Text «Der Spaziergang».",
+  link: "https://gehstück.ch",
+  kosten: "Kollekte",
+  veranstalter: "Léonard Wiesendanger",
+  kontakt: "info@gehstueck.ch"
+},
+{
+  titel: "Workshop. Pilgern in 100 Schritten",
+  referent: "Prof. Dr. David Atwood",
+  datum: "2024-09-28",
+  zeit: "15:00–15:45",
+  ort: "Schönthal",
+  beschr: "Der Religionswissenschaftler Prof. Dr. David Atwood vermittelt das Thema Pilgern frei, experimentell, religions-promenadologisch. Im Rahmen der Ausstellung des Klosters Schönthal «Der eilige Geist kommt zur Ruhe» von Gerda Steiner und Jörg Lenzlinger.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Gehstück. Reise an den schönsten Ort",
+  datum: "2024-09-28",
+  zeit: "17:15–18:15",
+  ort: "Schönthal",
+  beschr: "Wir folgen dem Ironiker Heinrich Heine in die Romantik und reisen mit ihm an den schönsten Ort. Im Rahmen der Ausstellung des Klosters Schönthal «Der eilige Geist kommt zur Ruhe».",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Lesekreis Landschaft: Warum ist Landschaft schön? Die Spaziergangswissenschaft",
+  datum: "2024-10-09",
+  zeit: "19:00",
+  ort: "Lokal",
+  beschr: "",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Spaziergang. Der Blick der Städter:in über die Stadtmauern",
+  datum: "2024-10-13",
+  zeit: "13:00–17:00",
+  ort: "Riehen Dorf, Tüllinger Berg, Burg Rötteln",
+  beschr: "Wo endet die Stadt, wo beginnt das Land? Wieso sind Burgen schön? Wir nähern uns Themen der Spaziergangswissenschaft – beobachtend, intervenierend, diskutierend. Kein Vorwissen notwendig.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Adaption fürs Gehen. Gehen",
+  datum: "2024-11-28",
+  zeit: "12:30–13:30",
+  ort: "Merian Gärten",
+  beschr: "Schnellgang mit dem abgründigen Text «Gehen» von Thomas Bernhard, adaptiert fürs Gehen. Teil der Lesungs- und Entwicklungsreihe «Gehstück, das».",
+  link: "https://gehstück.ch",
+  kosten: "Kollekte",
+  veranstalter: "Léonard Wiesendanger",
+  kontakt: "info@gehstueck.ch"
+},
+{
+  titel: "Spaziergang im Stadtverkehr. Zur Geschichte des städtischen Freiraums",
+  datum: "2025-02-23",
+  zeit: "14:00–16:00",
+  ort: "Basel",
+  beschr: "Wir spazieren und denken als Spazierende darüber nach, wo wir uns in der Stadt wohl und sicher fühlen – und wo nicht. Die Allmend gehört uns allen. Ist sie so ausgestaltet, dass sie für uns, die zu Fuss unterwegs sind, gut funktioniert? Welche Hindernisse stellen sich uns in den Weg?",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Rettet die Altstadt. Aktion Nadelberg vom 11. März 1961",
+  datum: "2025-03-20",
+  zeit: "",
+  ort: "",
+  beschr: "Der Rundgang erinnert an den historischen Fackelzug von 1961 für den Rosshof und beleuchtet zentrale Ereignisse im Kampf um den Erhalt der Basler Altstadt. Auf dem Spaziergang werden prägende Stationen dieser Geschichte besucht: Von der Aktion «Die Altstadt in Gefahr» (1949), bei der Lucius Burckhardt und Markus Kutter gegen den Abbruch der Aeschenvorstadt und die Talentslastungsstraße kämpften, über den Abbruch des Hauses «Sodeck» (1975) bis hin zur Erhaltung des Gerichtsgebäudes. Am Marktplatz wird die wegweisende Abstimmung gegen den Markthof (1976) thematisiert, die einen Wandel im Denken der Bevölkerung einleitete. Über den Spalenberg führt der Rundgang schließlich zum Rosshof und endet mit einer Rückbesinnung auf den Fackelzug sowie die leidenschaftliche Rede von Dr. Rudolf Fellmann.",
+  link: "",
+  kosten: "kostenlos",
+  veranstalter: "UB Ausstellung: Sehend denken",
+  kontakt: ""
+},
+{
+  titel: "Gehstück. Reise an den schönsten Ort",
+  datum: "2025-03-29",
+  zeit: "17:30–19:00",
+  ort: "Schönthal",
+  beschr: "In der Umgebung des Klosters Schönthal, wo Annemarie und Lucius Burckhardt viel Zeit verbrachten, folgen wir dem Ironiker Heinrich Heine in die Romantik und auf den Brocken, den höchsten Berg Deutschlands. Der Aufstieg ist nicht ohne Tücken, Burckhardts Spaziergangswissenschaft liefert uns das nötige Rüstzeug dazu.",
+  link: "https://gehstück.ch",
+  kosten: "kostenlos",
+  veranstalter: "Léonard Wiesendanger",
+  kontakt: "info@gehstueck.ch"
+},
+{
+  titel: "„Religions“-Promenadologie. Wo bitte geht’s denn hier zur Religion?",
+  referent: "Prof. Dr. David Atwood",
+  datum: "2025-04-04",
+  zeit: "16:00–17:15",
+  ort: "Basel",
+  beschr: "Auf Um- und Abwegen erforschen wir die Religionsgeschichte der Basler Innenstadt und gehen keltischen und römischen, den weithin sichtbaren christlichen und weniger sichtbaren neureligiös-spirituellen Spuren nach.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Tour de Bale (1)",
+  referent: "Office for Peripatetic Design",
+  datum: "2025-05-18",
+  zeit: "10:00",
+  ort: "Basel",
+  beschr: "Was, wenn eine abstrakte Linie körperliche Form annimmt? In zwei Etappen (1)/(2) schreiten wir die rund 28 km lange Stadtgrenze von Basel ab, konfrontieren uns mit dem Nicht-Vorhersehbaren und loten physische, politische und mentale Grenzen aus.",
+  link: "https://www.instagram.com/office.for.peripatetic.design/",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Tour de Bale (2)",
+  referent: "Office for Peripatetic Design",
+  datum: "2025-05-25",
+  zeit: "10:00",
+  ort: "Basel",
+  beschr: "Was, wenn eine abstrakte Linie körperliche Form annimmt? In zwei Etappen (1)/(2) schreiten wir die rund 28 km lange Stadtgrenze von Basel ab, konfrontieren uns mit dem Nicht-Vorhersehbaren und loten physische, politische und mentale Grenzen aus.",
+  link: "https://www.instagram.com/office.for.peripatetic.design/",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Kulturstadtplan. Buchraum Basel",
+  datum: "2025-06-12",
+  zeit: "",
+  ort: "Quartierzentrum Oekolampad",
+  beschr: "",
+  link: "https://buchraumbasel.ch/kulturstadtplan",
+  kosten: "kostenlos",
+  veranstalter: "Verein BuchRaumBasel",
+  kontakt: ""
+},
+{
+  titel: "Spaziergangswissenschaft trifft Literatur. Lucius und Annemarie Burckhardt mit Robert Walser im Gespräch",
+  datum: "2025-09-25",
+  zeit: "19:00–20:30",
+  ort: "Buchhandlung Labyrinth",
+  beschr: "Welche Rolle nimmt das Spazieren im Schaffen von Robert Walser und den Burckhardts ein? Wo berühren sich ihre Ansätze und wo unterscheiden sie sich? Was können wir davon für unser eigenes Gehen mitnehmen?",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Rating Seats",
+  datum: "2025-10-12",
+  zeit: "14:00–16:00",
+  ort: "Basel",
+  beschr: "What makes an urban space a good one? We go through the city and explore places to sit, planned or accidental. We take Instax photos and rate the seats. It‘s a slow walk, with plenty of pauses for sitting.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Das Basler Hafenareal in der Entwicklung. Ein städtebauliches Porträt",
+  referent: "Hans Baumgartner und Reto Bürgin",
+  datum: "2025-10-19",
+  zeit: "14:00–16:00",
+  ort: "Hafenareal Basel",
+  beschr: "Im Basler Hafen entsteht ein neues Quartier, – oder doch ein grosser Freiraum für alle? Das Areal transformiert sich, aus industriell wird urban. Wir fragen nach den Qualitäten des Bestehenden und dem aktuellen Stand der Entwicklung.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "flanör",
+  datum: "2025-11-16",
+  zeit: "ganzer Tag",
+  ort: "jede Stadt",
+  beschr: "Wie feiern wir die stillen Erfahrungen der Einzelnen? die sinnlichen Beobachtungen? die feinen Nachdenkereien? die freundschaftliche Anonymität? die unsichtbaren Fäden, die sich um jede Ecke und über jede Strasse spannen? Einladung – Am Sonntag, dem 16. November findet flanör statt. – flanör feiert die städtische Kultur des Gehens und hat keinen bestimmten Ort, nur die Stadt. – Die Idee ist einfach: Eine stille Bewegung wie das Gehen feiert sich vielleicht am besten still, erst recht, wenn so vieles heute so laut um Aufmerksamkeit schreit. – 1. Nimm Dir am 16. November etwas Zeit fürs Gehen in der Stadt. Geh allein, geht zu zweit, oder auch als Gruppe. – 2. Gib diese Einladung an zehn Personen weiter, die gerne zu Fuss unterwegs sind, oder es gerne öfters wären. – Am 16. November werden viele Leute unterwegs sein und voneinander wissen, ohne mehr voneinander zu wissen. – Ein Fest, wie es noch keines gegeben hat! – flanör findet bei jedem Wetter statt. – Diese Einladung erreicht Dich aus Basel. Passe die Signatur [Basel] an, wenn Du die Einladung von woanders weiterleitest.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Die unsichtbare Stadt. Italo Calvino",
+  datum: "2025-12-13",
+  zeit: "16:00–17:30",
+  ort: "",
+  beschr: "Italo Calvino schreibt mit «Die unsichtbaren Städte» einen Klassiker literarischer Stadtbetrachtung. Wir lesen Passagen und sehen, wie Basel verschwindet und wieder auftaucht.",
+  link: "https://lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
+{
+  titel: "Gespräch in der Bibliothek: Lucius Burckhardt",
+  datum: "2025-11-05",
+  zeit: "17:00–18:00",
+  ort: "FHNW Bibliothek Muttenz, 3. OG",
+  beschr: "Gespräch zwischen Dominique Salathé (HABG, Institut Architektur) und Dr. Christian Reutlinger (HSA, Institut Sozialplanung). Moderation: Dieter Kohler.",
+  link: "",
+  kosten: "kostenlos",
+  veranstalter: "FHNW Bibliothek Muttenz",
+  kontakt: ""
+},
+{
+  titel: "jane’s walk",
+  datum: "2025-03-02",
+  zeit: "",
+  ort: "alle Städte",
+  beschr: "Jane’s Walk ist ein nach Jane Jacobs benannter Nachbarschaftsspaziergang, der jährlich in Hunderten Städten stattfindet. Spaziergänge schaffen Raum für Austausch, Gemeinschaft und Geschichten.",
+  link: "",
+  kosten: "kostenlos",
+  veranstalter: "",
+  kontakt: ""
+},
+{
+  titel: "Schreib-Walk-Shop. Zu den Sternen",
+  referent: "Marie-Anne Lerjen",
+  datum: "2025-11-13",
+  zeit: "18:30–20:00",
+  ort: "Zürich",
+  beschr: "«Eines nachts, sternklarer Januar, habe ich Vater und Mutter auf die Gürtelsterne von Orion gesetzt, Vaters liebstes Zeichen am Winterhimmel», so schreibt der junge Erzähler in Klaus Merz’ Roman «Jakob schläft» (1997). Der Nachthimmel und insbesondere der Orion spielen eine wichtige Rolle in dieser kurzen Familiengeschichte. Auch am Herbsthimmel über Zürich zeigt sich das Sternbild des Orion. Im Rahmen der Ausstellung «Merz Welt» der Galerie Litar in Zürich lädt lerjentours zu einem Schreib-Walk-Shop, auf dem wir uns auf einem kurzen Abendspaziergang vom Nachthimmel zu Wortfolgen inspirieren lassen. Schreiberfahrung ist für eine Teilnahme nicht notwendig. Es braucht auch keine Kenntnisse von Klaus Merz’ Text.",
+  link: "https://www.lerjentours.ch/zu-den-sternen/",
+  kosten: "CHF 15 / CHF 10",
+  veranstalter: "litar (Ausstellung: Merz Welt)",
+  kontakt: "info@litar.ch"
+},
+{
+  titel: "WALKING – Denken in Bewegung",
+  datum: "2025-09-05",
+  zeit: "",
+  ort: "Berghotel Alpenblick in Tenna, Safiental",
+  beschr: "Eine transdisziplinäre Tagung zu Gehen als künstlerische Praxis, räumliche Erfahrung und erkenntnisstiftende Methode im Geist von Lucius Burckhardt.Organisiert von ILEA - Institute for Land and Environmental Art.Kuration/Moderation: Johannes M. Hedinger, Raimund RodewaldWALKING als Methode und Medium gewinnt in einer fragmentierten Welt neue Bedeutung. Zum 100. Geburtstag von Lucius Burckhardt fragen wir, wie seine Promenadologie heute weitergedacht werden kann – als kritische Praxis der Wahrnehmung, als künstlerische Forschung, als politisches Mittel. Gehen heißt, wahrzunehmen, zu hinterfragen, Raum neu zu schreiben. Künstlerische und wissenschaftliche Positionen greifen Burckhardts Impulse auf und erweitern sie um feministische, dekoloniale und performative Perspektiven. WALKING wird damit zu einer transdisziplinären Praxis: Erkenntnisform, Widerstandsgeste, ästhetische Forschung. Die Frage lautet heute nicht mehr: „Warum ist Landschaft schön?“, sondern: Wie lässt sich in einer komplexen Welt durch Bewegung, Aufmerksamkeit und situatives Denken eine neue Wahrnehmung kultivieren? Versammelt und diskutiert werden Positionen, die sich mit WALKING als erkenntnisstiftender, ästhetischer und politischer Praxis befassen – aus künstlerisch-gestalterischen, wissenschaftlicher oder aktivistischer Perspektive. Es sind auch Formate, die über klassische Vorträge hinausgehen: performative Walks, Lecture Walks, Walkshops, interaktive Settings, Audio- oder Textspuren u.a. Kuration/Moderation: J. M. Hedinger, R. Rodewald.",
+  link: "https://ilea.art/",
+  kosten: "",
+  veranstalter: "ILEA",
+  kontakt: "info@ilea.art"
+},
+{
+  titel: "Lucius Burckhardt Convention IV",
+  datum: "2025-06-27",
+  zeit: "",
+  ort: "Kunsthochschule Kassel, Hörsaal",
+  beschr: "Wir feiern am letzten Wochenende im Juni den 100. Geburtstag des Schweizer Soziologen Lucius Burckhardt. Annemarie (1930–2012) und Lucius Burckhardt (1925–2003) haben mit kritischem Blick und großer Weitsicht auf vielen Gebieten die Wahrnehmung und Gestaltung unserer Welt seit den 1950er Jahren beeinflusst. Vielen Studenten und Studentinnen in Europa – nicht nur in den entwerfenden Berufen – eröffneten sie neue Perspektiven. Beide waren von 1973 bis 1997 an der Universität Kassel im Fachbereich Architektur, Stadtplanung und Landschaftsplanung aktiv. Wer plant die Planung? Warum ist Landschaft schön? Design ist unsichtbar, Durch Pflege zerstört oder Der kleinstmögliche Eingriff: diese Burckhardtschen Fragen und Formeln sind bis heute aktuell. Bereits als Student kämpfte Lucius Burckhardt gegen die Zerstörung der Gotischen Altstadt von Basel, die dem autogerechten Umbau weichen sollte. In den 1980er Jahren sprechen die Burckhardts von der Spaziergangswissenschaft ...",
+  link: "https://www.lucius-burckhardt.org/Deutsch/Convention/4.Convention.html",
+  kosten: "kostenlos",
+  veranstalter: "Prof. Martin Schmitz",
+  kontakt: ""
+}
+  ];

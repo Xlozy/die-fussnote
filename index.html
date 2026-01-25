@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Die Fußnote – Agenda für Gehkultur</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root{
+      --bg:#f7f7f5; --fg:#1c1c1a; --muted:#6b6b66; --line:#e6e6e3; --link:#0b63ff;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .wrap{max-width:860px;margin:0 auto;padding:32px 20px 80px}
+    header{margin-bottom:28px}
+    h1{font-size:28px;margin:0 0 6px}
+    h2{font-size:22px;margin:0 0 6px}
+    p.lead{margin:0;color:var(--muted)}
+    .section{margin-top:28px}
+      .section p {
+        margin-bottom: 0;
+      }
+      .section p + p.meta {
+        margin-top: 4px;
+      }
+    h3{font-size:18px;margin:24px 0 12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+    .event{border-top:1px solid var(--line);padding:14px 0}
+    .event:first-child{border-top:none}
+    .title{font-weight:600}
+    .meta{color:var(--muted);font-size:14px;margin-top:2px}
+    .desc{margin-top:6px}
+    .grid{display:grid;gap:10px}
+    .box{border:1px solid var(--line);padding:14px;border-radius:8px;background:#fff}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin-top:40px;color:var(--muted);font-size:14px}
+    sup {
+  font-size: 0.65em;   /* etwas kleiner als normal */
+  vertical-align: super; /* bleibt schön hochgestellt */
+  line-height: 0;       /* verhindert zu viel Abstand nach oben */
+}
+    /* small screens */
+    @media (min-width:680px){ .grid{grid-template-columns:1fr 1fr} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Die Fußnote</h1>
+      <h2>Agenda für Gehkultur<sup>1</sup></h2>
+      <p class="lead">Versammelt Veranstaltungen, die das Gehen zum Gegenstand oder zur Methode nehmen.</p>
+    </header>
+
+    <section class="section">
+      <h3>Veranstaltung vorschlagen</h3>
+      <p>Hinweise per E-Mail an <a href="mailto:info@lokal-fuer-raumbegehung">info@lokal-fuer-raumbegehung.ch</a></p>
+      <p>Angaben: Datum, Zeit, Ort, Kosten, Veranstalter:in, Titel, Kurzbeschrieb, Kontakt (E-Mail).</p>
+    </section>
+
+    <section class="section">
+      <h3>Kuratiert vom Lokal für Raumbegehung (Basel)</h3>
+      <p>
+        Das Lokal für Raumbegehung ist ein kulturwissenschaftlicher Offspace,
+        inspiriert von der Spaziergangswissenschaft. Es hat zu Semesterzeiten
+        an zwei Tagen in der Woche offen und stellt eine umfangreiche
+        Büchersammlung zur Verfügung. Es finden in regelmässigen Abständen
+        Veranstaltungen statt zu den Themen Stadt, Landschaft und Wahrnehmung
+        im 21. Jahrhundert.
+      </p>
+      <p class="meta">
+        <a href="https://lokal-fuer-raumbegehung.ch" target="_blank" rel="noopener">
+          Mehr&nbsp;Infos
+        </a>
+      </p>
+      </section>
+
+    <footer>
+      <p><sup>1</sup> Hinweis: Für die Richtigkeit der gemachten Angaben sind die Veranstaltenden verantwortlich. Bei Unsicherheit bezüglich der Durchführungen kontaktieren Sie diese bitte direkt.</p>
+    </footer>
+
+    <br>
+    <hr>
+    <br>
+    
+    <!-- Kommende Termine füllt JS automatisch -->
+    <section class="section" id="upcoming">
+      <h3>Kommende Veranstaltungen</h3>
+      <div id="upcoming-list"></div>
+    </section>
+
+    <!-- Vergangene Termine füllt JS automatisch -->
+    <section class="section" id="past">
+      <h3>Vergangene Veranstaltungen</h3>
+      <div id="past-list"></div>
+    </section>
+
+  </div>
+
+  <script src="events.js"></script>
+  <script>
+
+  // --- Helpers ---
+  const $up = document.getElementById('upcoming-list');
+  const $past = document.getElementById('past-list');
+
+  function fmtDate(iso){
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString('de-CH', {weekday:'short', day:'2-digit', month:'2-digit', year:'numeric'});
+  }
+
+  function isEmail(s){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s||"").trim()); }
+
+function card(ev) {
+  const kontakt = ev.kontakt
+    ? (isEmail(ev.kontakt)
+        ? `<a href="mailto:${ev.kontakt}">${ev.kontakt}</a>`
+        : ev.kontakt)
+    : "";
+
+  const metaTop = [
+    ev.datum ? fmtDate(ev.datum) : "",
+    ev.zeit || "",
+    ev.ort || "",
+    ev.kosten || ""
+  ].filter(Boolean).join(" · ");
+
+  // Untere Zeile: Mit: [Referent] · Organisiert von: [Veranstalter] · [Kontakt]
+  const metaBottom = [
+    ev.referent ? `Mit: ${ev.referent}` : "",
+    ev.veranstalter ? `Organisiert von: ${ev.veranstalter}` : "",
+    kontakt || ""
+  ].filter(Boolean).join(" · ");
+
+  return `
+    <article class="event">
+      <div class="title">${ev.titel || ""}</div>
+      ${metaTop ? `<div class="meta">${metaTop}</div>` : ""}
+      ${metaBottom ? `<div class="meta">${metaBottom}</div>` : ""}
+      ${ev.beschr ? `<div class="desc">${ev.beschr}</div>` : ""}
+      ${ev.link ? `<div class="meta"><a href="${ev.link}" target="_blank" rel="noopener">Mehr&nbsp;Infos</a></div>` : ""}
+    </article>
+  `;
+}
+
+  function render(){
+    const today = new Date(); today.setHours(0,0,0,0);
+    const upcoming = EVENTS.filter(e => e.datum && new Date(e.datum) >= today)
+                           .sort((a,b)=> new Date(a.datum)-new Date(b.datum));
+    const past = EVENTS.filter(e => e.datum && new Date(e.datum) < today)
+                       .sort((a,b)=> new Date(b.datum)-new Date(a.datum));
+    $up.innerHTML = upcoming.length ? upcoming.map(card).join('') : '<p class="meta">Keine kommenden Veranstaltungen.</p>';
+    $past.innerHTML = past.length ? past.map(card).join('') : '<p class="meta">Noch kein Archiv.</p>';
+  }
+  render();
+
+  // (Optional) Falls du auch im Formular die neuen Felder sammeln willst,
+  // könntest du dort Felder für Kosten, Veranstalter, Kontakt ergänzen
+  // und in den mailto-Body aufnehmen.
+</script>
+</body>
+</html>
