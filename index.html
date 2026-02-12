@@ -47,12 +47,29 @@
     .box{border:1px solid var(--line);padding:14px;border-radius:8px;background:#fff}
     a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    footer{margin-top:40px;color:var(--muted);font-size:14px}
+    .fussnote{margin-top:40px;color:var(--muted);font-size:14px}
     sup {
   font-size: 0.65em;   /* etwas kleiner als normal */
   vertical-align: super; /* bleibt schön hochgestellt */
   line-height: 0;       /* verhindert zu viel Abstand nach oben */
 }
+    .footer-container {width: 100%; text-align: center; font-size:14px}
+    .footer-container ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+    .footer-container a {
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+            .footer-container a:hover {
+            text-decoration: underline;
+        }
+
     /* small screens */
     @media (min-width:680px){ .grid{grid-template-columns:1fr 1fr} }
   </style>
@@ -88,7 +105,7 @@
       </p>
       </section>
 
-    <footer>
+    <footer class="fussnote">
       <p><sup>1</sup> Hinweis: Für die Richtigkeit der gemachten Angaben sind die Veranstaltenden verantwortlich. Bei Unsicherheit bezüglich der Durchführungen kontaktieren Sie diese bitte direkt.</p>
     </footer>
 
@@ -109,6 +126,20 @@
     </section>
 
   </div>
+
+  <footer>
+    <div class="footer-container">
+      <ul>
+        <li>&copy; 2026 Lokal für Raumbegehung. Alle Rechte vorbehalten.</li>
+      </ul>
+      <ul>
+        <li><a href="mailto:info@lokal-fuer-raumbegehung.ch">Kontakt</a></li>
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutzerklaerung.html">Datenschutzerklärung</a></li>
+      </ul>        
+    </div>
+</footer>
+
 
   <script src="events.js"></script>
   <script>
