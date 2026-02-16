@@ -8,12 +8,25 @@
   beschr: "",
   link: "",
   kosten: "",
+  referent: "",
   veranstalter: "",
   kontakt: ""
 }
 */
 
 window.EVENTS = [ 
+  {
+  titel: "Der Wanderformel auf der Spur",
+  datum: "2026-03-22",
+  zeit: "11:00-14:00",
+  ort: "Gelbes Haus, Via Nova 60, Flims",
+  beschr: "Wie unterscheiden sich spazieren und wandern, wurde der Geschäftsleiter der Schweizer Wanderwege mal gefragt. Wandern sei eine bewusste Aktivität, die vorbereitet sein müsse. Die Spazierkünstlerin Marie-Anne Lerjen und der Wanderkurator Beat Gugger packen deshalb je ihren Rucksack. Doch für einmal befinden sich darin vielfältige Anregungen. Gemeinsam machen wir uns in Flims auf den Weg und erkunden fussläufig die Formel fürs Wandern. Herzliche Einladung zum Mitwandern! Eine Exkursion im Rahmen der Ausstellung «Wandern. Eine Ausstellung, die bewegt» des Das Gelbe Haus in Flims (bis 6. April 2026).",
+  link: "https://www.dasgelbehausflims.ch/de",
+  kosten: "CHF 15 / 10",
+  referent: "Marie-Anne Lerjen und Beat Gugger",
+  veranstalter: "Das Gelbe Haus",
+  kontakt: "info@dasgelbehausflims.ch"
+},
     {
   titel: "Religion – Natur, Landschaft und Wandern",
   referent: "Prof. Dr. Jürgen Mohn",
