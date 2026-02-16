@@ -15,6 +15,30 @@
 */
 
 window.EVENTS = [ 
+    {
+  titel: "Auf den Spuren der Basler Dichter Werner Lutz und Rainer Brambach",
+  datum: "2026-04-12",
+  zeit: "11:00-12:30",
+  ort: "bei Anmeldung bekannt gegeben",
+  beschr: "Der Spaziergang im Dalbeloch am Rhein folgt Gedichten und Lebensspuren von Lyrikerinnen und Lyrikern. Ausgewählte Texte öffnen poetische, biographische und topografische Räume: Rainer Brambach (1917-1983) und Werner Lutz (1930-2016) lebten und schrieben mit Blick auf den Rhein. Ihre Gedichte treten in Dialog mit Texten von Julia Rüegger (*1994), die den Spaziergang begleitet. Dieser klingt mit einem kurzen Gespräch aus.",
+  link: "literaturspur.ch",
+  kosten: "CHF 35 / CHF 20",
+  referent: "Martina Kuoni und Julia Rüegger",
+  veranstalter: "Literaturspur",
+  kontakt: "info@literaturspur.ch"
+},
+  {
+  titel: "The Long Way Home. Kollektiver Nachtspaziergang mit San Keller",
+  datum: "2026-02-27",
+  zeit: "ab 22:00",
+  ort: "Tramstation Bahnhof St. Johann",
+  beschr: "Das Format wurde 2003 vom Zürcher Künstler San Keller ins Leben gerufen – während eines ganzen Jahres traf er sich einmal im Monat an der New Yorker Grand Central Station mit einer Gruppe von Menschen, um diese zu Fuss nachhause zu bringen. Dieses Format holen wir jetzt nach Basel. Wir treffen uns am 27.02.2026 um 22.00 Uhr bei der Tramstation Bahnhof St. Johann und bringen uns eine nach der anderen nach Hause. In jedem Zuhause wird eine kurze (bei Bedarf längere) Rast eingelegt, um sich aufzuwärmen und eine kleine Stärkung zu sich zu nehmen, bevor es zurück auf die Strasse geht. Eine Anmeldung ist nicht nötig. Wichtig sind warme Kleidung und warme, bequeme Laufschuhe. Ausserdem sollte jede*r Teilnehmer*in bereit sein, in seinem*ihrem Zuhause einen Moment der Gastfreundlichkeit und eine kleine Stärkung zu gewähren – dabei geht es nicht um fancy Wohnorte oder besondere Delikatessen, sondern um basale Regeneration.",
+  link: "",
+  kosten: "",
+  referent: "",
+  veranstalter: "San Keller",
+  kontakt: ""
+},
   {
   titel: "Der Wanderformel auf der Spur",
   datum: "2026-03-22",
