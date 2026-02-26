@@ -15,6 +15,18 @@
 */
 
 window.EVENTS = [ 
+  {
+  titel: "Lesekreis Landschaft: Jenseits des Sichtbaren. Landschaft im Spiegel von Politik und Ästhetik",
+  datum: "2026-03-11",
+  zeit: "19:00-20:00",
+  ort: "Lokal für Raumbegehung",
+  beschr: "Jacques Rancière beschreibt das späte 18. Jahrhundert als Anfang einer ästhetischen Revolution, in der Landschaft zum Gegenstand politischer und ästhetischer Debatten wurde. Wir lesen Auszüge, die für eine kritische Wahrnehmung von Landschaft im 21. Jahrhundert produktiv sind. – Der Lesekreis Landschaft ist ein öffentliches Gesprächsformat. Ausgangspunkt sind kurze Textauszüge zu Landschaft, Stadt und Wahrnehmung im 21. Jahrhundert. Im Mittelpunkt steht der gemeinsame Dialog. Jedes Treffen wird von einer anderen Person aus Hochschule, Praxis oder Kultur moderiert. Es wird kein Vorwissen vorausgesetzt, die Textauszüge werden vor Ort gelesen. Die Teilnahme ist unverbindlich, die Gruppe setzt sich jedes Mal neu zusammen.",
+  link: "lokal-fuer-raumbegehung.ch",
+  kosten: "kostenlos",
+  referent: "Julia Rüegger",
+  veranstalter: "Lokal für Raumbegehung",
+  kontakt: "info@lokal-fuer-raumbegehung.ch"
+},
     {
   titel: "Auf den Spuren der Basler Dichter Werner Lutz und Rainer Brambach",
   datum: "2026-04-12",
@@ -335,11 +347,11 @@ window.EVENTS = [
 },
 {
   titel: "jane’s walk",
-  datum: "2025-03-02",
+  datum: "2025-05-02",
   zeit: "",
   ort: "alle Städte",
-  beschr: "Jane’s Walk ist ein nach Jane Jacobs benannter Nachbarschaftsspaziergang, der jährlich in Hunderten Städten stattfindet. Spaziergänge schaffen Raum für Austausch, Gemeinschaft und Geschichten.",
-  link: "",
+  beschr: "Jane’s Walk ist ein nach Jane Jacobs benannter Nachbarschaftsspaziergang, der jährlich in Hunderten Städten stattfindet. Spaziergänge schaffen Raum für Austausch, Gemeinschaft und Geschichten. Alle könen grundsätzlich einen Spaziergang veranstalten. Die Website janeswalk.org unterstützt bei der Konzeption und Durchführung.",
+  link: "https://janeswalk.org/",
   kosten: "kostenlos",
   veranstalter: "",
   kontakt: ""
