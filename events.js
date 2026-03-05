@@ -20,7 +20,7 @@ window.EVENTS = [
   datum: "2026-03-19",
   zeit: "14:00-16:00",
   ort: "Museum Allschwil – Haus für Kultur und Geschichte, Allschwil",
-  beschr: "Gemeinsam gehen wir auf einen topoetischen Spaziergang auf dem ehemaligen Judenweg. Bis Mitte des 19. Jahrhunderts durften Jüdinnen und Juden nicht in Basel wohnen. Viele von ihnen pendelten gezwungenermassen den langen Weg von Hegenheim über die 'Judengasse' am Allschwiler Rosenberg in die Stadt. Victor Saudan verbrachte vor einigen Jahren einige Tage auf diesem Weg und schrieb vor Ort Gedichte. Im experimentellen Schreiben verbindet er Topos und Poesie – Topoesie. Philippe Koerper begleitet den Spaziergang musikalisch. Dauer ca. 90 Min. Plätze beschränkt, Reservation empfohlen.",
+  beschr: "Gemeinsam gehen wir auf einen topoetischen Spaziergang auf dem ehemaligen Judenweg. Bis Mitte des 19. Jahrhunderts durften Jüdinnen und Juden nicht in Basel wohnen. Viele von ihnen pendelten gezwungenermassen den langen Weg von Hegenheim über die 'Judengasse' am Allschwiler Rosenberg in die Stadt. Victor Saudan verbrachte vor einigen Jahren einige Tage auf diesem Weg und schrieb vor Ort Gedichte. Im experimentellen Schreiben verbindet er Topos und Poesie – Topoesie. Philippe Koerper begleitet den Spaziergang musikalisch. Dauer ca. 90 Min. Wichtig: Pass oder ID mitnehmen! Plätze beschränkt, Reservation empfohlen.",
   link: "https://baslergeschichtstage.ch/events/poetischer-spaziergang-zwischen-allschwil-und-hegenheim/",
   kosten: "CHF 15 / 10",
   referent: "Victor Saudan und Philippe Koerper",
