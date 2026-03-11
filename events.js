@@ -34,7 +34,7 @@ window.EVENTS = [
   zeit: "19:00-20:00",
   ort: "Lokal für Raumbegehung",
   beschr: "Jacques Rancière beschreibt das späte 18. Jahrhundert als Anfang einer ästhetischen Revolution, in der Landschaft zum Gegenstand politischer und ästhetischer Debatten wurde. Wir lesen Auszüge, die für eine kritische Wahrnehmung von Landschaft im 21. Jahrhundert produktiv sind. – Der Lesekreis Landschaft ist ein öffentliches Gesprächsformat. Ausgangspunkt sind kurze Textauszüge zu Landschaft, Stadt und Wahrnehmung im 21. Jahrhundert. Im Mittelpunkt steht der gemeinsame Dialog. Jedes Treffen wird von einer anderen Person aus Hochschule, Praxis oder Kultur moderiert. Es wird kein Vorwissen vorausgesetzt, die Textauszüge werden vor Ort gelesen. Die Teilnahme ist unverbindlich, die Gruppe setzt sich jedes Mal neu zusammen.",
-  link: "lokal-fuer-raumbegehung.ch",
+  link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   referent: "Julia Rüegger",
   veranstalter: "Lokal für Raumbegehung",
