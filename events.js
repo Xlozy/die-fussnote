@@ -15,6 +15,30 @@
 */
 
 window.EVENTS = [ 
+    {
+  titel: "Elsässerstrasse. Wohnen, Leben, Arbeiten an der Elsässerstrasse vom Zollstübli bis zum Badhüsli",
+  datum: "2026-04-25",
+  zeit: "14:00-16:00",
+  ort: "Voltaplatz (unter den neuen Bäumen vor dem Kiosk)",
+  beschr: "Von der Grenze bis zum St. Johanns-Tor entdecken wir unter der Führung von Historikerin Claudia Wirthlin gemeinsam Altbekanntes und Neues. Was macht das besondere Flair der Elsässerstrasse aus? Was ist eher schwierig aus unserer Sicht? Welche Zukunft wünschen wir uns? Wir schauen zum Teil hinter verschlossene Türen und gewinnen auf unserem Spaziergang vielleicht sogar neue Ein- und Aussichten. Mit anschliessendem Apéro vom Neutralen Quartierverein St. Johann. Trambillett (Kurzstrecke) benögtigt.",
+  link: "https://mozaikzeitung.ch/",
+  kosten: "gratis / Kollekte",
+  referent: "Claudia Wirthlin",
+  veranstalter: "mozaik Quartierzeitung",
+  kontakt: ""
+},
+  {
+  titel: "Klybeckstrasse. Trouvaillen auf dem Weg vom Claraplatz zum Klybeckschlösschen",
+  datum: "2026-04-18",
+  zeit: "14:00-16:00",
+  ort: "Vor der Clarakirche (Claraplatz)",
+  beschr: "Das Bläsitor und das Klybeckschloss sind längst aus dem Stadtbild verschwunden. Aber entlang der Klybeckstrasse gibt es immer noch viele Spuren der Entwicklung des Unteren Kleinbasels und des Klybecks. Unter Führung der Historikerin Sabine Braunschweig und Hans-Georg Heimann, Präsident des Museums für Chemie- und Migrationsgeschichte. Mit anschliessendem Apéro vom mozaik.",
+  link: "https://mozaikzeitung.ch/",
+  kosten: "gratis / Kollekte",
+  referent: "Sabine Braunschweig und Hans-Georg Heimann",
+  veranstalter: "mozaik Quartierzeitung",
+  kontakt: ""
+},
 {
   titel: "Spaziergang mit Gedichten und Musik",
   datum: "2026-03-19",
