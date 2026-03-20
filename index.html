@@ -49,28 +49,74 @@
     a:hover{text-decoration:underline}
     .fussnote{margin-top:40px;color:var(--muted);font-size:14px}
     sup {
-  font-size: 0.65em;   /* etwas kleiner als normal */
-  vertical-align: super; /* bleibt schön hochgestellt */
-  line-height: 0;       /* verhindert zu viel Abstand nach oben */
-}
+      font-size: 0.65em;
+      vertical-align: super;
+      line-height: 0;
+    }
     .footer-container {width: 100%; text-align: center; font-size:14px}
     .footer-container ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
     .footer-container a {
-            color: #000000;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-            .footer-container a:hover {
-            text-decoration: underline;
-        }
+      color: #000000;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .footer-container a:hover {
+      text-decoration: underline;
+    }
 
-    /* small screens */
+    /* --- Region Tabs --- */
+    .tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 16px;
+    }
+    .tab {
+      padding: 6px 14px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+      cursor: pointer;
+      border: none;
+      background: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    .tab:first-child {
+      padding-left: 0;
+    }
+    .tab:hover {
+      color: var(--fg);
+    }
+    .tab.active {
+      color: var(--fg);
+      border-bottom-color: var(--fg);
+    }
+    .tab .count {
+      font-size: 11px;
+      margin-left: 3px;
+    }
+
+    /* small screens: scrollable tabs */
+    @media (max-width:679px){
+      .tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .tab {
+        padding: 6px 10px;
+        font-size: 13px;
+      }
+    }
+
     @media (min-width:680px){ .grid{grid-template-columns:1fr 1fr} }
   </style>
 </head>
@@ -103,7 +149,7 @@
           Mehr&nbsp;Infos
         </a>
       </p>
-      </section>
+    </section>
 
     <footer class="fussnote">
       <p><sup>1</sup> Hinweis: Für die Richtigkeit der gemachten Angaben sind die Veranstaltenden verantwortlich. Bei Unsicherheit bezüglich der Durchführungen kontaktieren Sie diese bitte direkt.</p>
@@ -113,15 +159,17 @@
     <hr>
     <br>
     
-    <!-- Kommende Termine füllt JS automatisch -->
+    <!-- Kommende Termine -->
     <section class="section" id="upcoming">
       <h3>Kommende Veranstaltungen</h3>
+      <div class="tabs" id="upcoming-tabs"></div>
       <div id="upcoming-list"></div>
     </section>
 
-    <!-- Vergangene Termine füllt JS automatisch -->
+    <!-- Vergangene Termine -->
     <section class="section" id="past">
       <h3>Vergangene Veranstaltungen</h3>
+      <div class="tabs" id="past-tabs"></div>
       <div id="past-list"></div>
     </section>
 
@@ -138,16 +186,32 @@
         <li><a href="/datenschutzerklaerung.html">Datenschutzerklärung</a></li>
       </ul>        
     </div>
-</footer>
+  </footer>
 
 
   <script src="events.js"></script>
   <script>
 
-  // --- Helpers ---
-  const $up = document.getElementById('upcoming-list');
-  const $past = document.getElementById('past-list');
+  // --- Config ---
+  const REGIONS = [
+    { key: "alle",     label: "Alle" },
+    { key: "basel",    label: "Basel" },
+    { key: "zuerich",  label: "Zürich" },
+    { key: "bern",     label: "Bern" },
+    { key: "anderswo", label: "Anderswo" },
+    { key: "konzepte", label: "Konzepte" }
+  ];
 
+  // --- State ---
+  let activeRegion = { upcoming: "alle", past: "alle" };
+
+  // --- DOM ---
+  const $upTabs  = document.getElementById('upcoming-tabs');
+  const $upList  = document.getElementById('upcoming-list');
+  const $pastTabs = document.getElementById('past-tabs');
+  const $pastList = document.getElementById('past-list');
+
+  // --- Helpers ---
   function fmtDate(iso){
     const d = new Date(iso + "T00:00:00");
     return d.toLocaleDateString('de-CH', {weekday:'short', day:'2-digit', month:'2-digit', year:'numeric'});
@@ -155,52 +219,107 @@
 
   function isEmail(s){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s||"").trim()); }
 
-function card(ev) {
-  const kontakt = ev.kontakt
-    ? (isEmail(ev.kontakt)
-        ? `<a href="mailto:${ev.kontakt}">${ev.kontakt}</a>`
-        : ev.kontakt)
-    : "";
+  function filterEvents(events, key){
+    if(key === "alle") return events;
+    if(key === "konzepte") return events.filter(e => e.konzept === true);
+    return events.filter(e => e.region === key);
+  }
 
-  const metaTop = [
-    ev.datum ? fmtDate(ev.datum) : "",
-    ev.zeit || "",
-    ev.ort || "",
-    ev.kosten || ""
-  ].filter(Boolean).join(" · ");
+  function card(ev) {
+    const kontakt = ev.kontakt
+      ? (isEmail(ev.kontakt)
+          ? `<a href="mailto:${ev.kontakt}">${ev.kontakt}</a>`
+          : ev.kontakt)
+      : "";
 
-  // Untere Zeile: Mit: [Referent] · Organisiert von: [Veranstalter] · [Kontakt]
-  const metaBottom = [
-    ev.referent ? `Mit: ${ev.referent}` : "",
-    ev.veranstalter ? `Organisiert von: ${ev.veranstalter}` : "",
-    kontakt || ""
-  ].filter(Boolean).join(" · ");
+    const metaTop = [
+      ev.datum ? fmtDate(ev.datum) : "",
+      ev.zeit || "",
+      ev.ort || "",
+      ev.kosten || ""
+    ].filter(Boolean).join(" · ");
 
-  return `
-    <article class="event">
-      <div class="title">${ev.titel || ""}</div>
-      ${metaTop ? `<div class="meta">${metaTop}</div>` : ""}
-      ${metaBottom ? `<div class="meta">${metaBottom}</div>` : ""}
-      ${ev.beschr ? `<div class="desc">${ev.beschr}</div>` : ""}
-      ${ev.link ? `<div class="meta"><a href="${ev.link}" target="_blank" rel="noopener">Mehr&nbsp;Infos</a></div>` : ""}
-    </article>
-  `;
-}
+    const metaBottom = [
+      ev.referent ? `Mit: ${ev.referent}` : "",
+      ev.veranstalter ? `Organisiert von: ${ev.veranstalter}` : "",
+      kontakt || ""
+    ].filter(Boolean).join(" · ");
 
-  function render(){
+    return `
+      <article class="event">
+        <div class="title">${ev.titel || ""}</div>
+        ${metaTop ? `<div class="meta">${metaTop}</div>` : ""}
+        ${metaBottom ? `<div class="meta">${metaBottom}</div>` : ""}
+        ${ev.beschr ? `<div class="desc">${ev.beschr}</div>` : ""}
+        ${ev.link ? `<div class="meta"><a href="${ev.link}" target="_blank" rel="noopener">Mehr&nbsp;Infos</a></div>` : ""}
+      </article>
+    `;
+  }
+
+  // --- Split events ---
+  function splitEvents(){
     const today = new Date(); today.setHours(0,0,0,0);
     const upcoming = EVENTS.filter(e => e.datum && new Date(e.datum) >= today)
-                           .sort((a,b)=> new Date(a.datum)-new Date(b.datum));
+                           .sort((a,b) => new Date(a.datum) - new Date(b.datum));
     const past = EVENTS.filter(e => e.datum && new Date(e.datum) < today)
-                       .sort((a,b)=> new Date(b.datum)-new Date(a.datum));
-    $up.innerHTML = upcoming.length ? upcoming.map(card).join('') : '<p class="meta">Keine kommenden Veranstaltungen.</p>';
-    $past.innerHTML = past.length ? past.map(card).join('') : '<p class="meta">Noch kein Archiv.</p>';
+                       .sort((a,b) => new Date(b.datum) - new Date(a.datum));
+    return { upcoming, past };
   }
+
+  // --- Count per tab ---
+  function countByTab(events){
+    const counts = { alle: events.length, konzepte: events.filter(e => e.konzept === true).length };
+    REGIONS.forEach(r => {
+      if(r.key !== "alle" && r.key !== "konzepte") counts[r.key] = events.filter(e => e.region === r.key).length;
+    });
+    return counts;
+  }
+
+  // --- Build tabs ---
+  function buildTabs(container, section, counts){
+    container.innerHTML = "";
+    REGIONS.forEach(r => {
+      // Tabs mit 0 Events ausblenden (ausser "Alle")
+      if(r.key !== "alle" && counts[r.key] === 0) return;
+
+      const btn = document.createElement("button");
+      btn.className = "tab" + (activeRegion[section] === r.key ? " active" : "");
+      btn.innerHTML = `${r.label}<span class="count">${counts[r.key]}</span>`;
+      btn.addEventListener("click", () => {
+        activeRegion[section] = r.key;
+        render();
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  // --- Render ---
+  function render(){
+    const { upcoming, past } = splitEvents();
+
+    // Counts
+    const upCounts = countByTab(upcoming);
+    const pastCounts = countByTab(past);
+
+    // Tabs
+    buildTabs($upTabs, "upcoming", upCounts);
+    buildTabs($pastTabs, "past", pastCounts);
+
+    // Filtered lists
+    const upFiltered = filterEvents(upcoming, activeRegion.upcoming);
+    const pastFiltered = filterEvents(past, activeRegion.past);
+
+    $upList.innerHTML = upFiltered.length
+      ? upFiltered.map(card).join('')
+      : '<p class="meta">Keine Veranstaltungen in dieser Auswahl.</p>';
+
+    $pastList.innerHTML = pastFiltered.length
+      ? pastFiltered.map(card).join('')
+      : '<p class="meta">Keine vergangenen Veranstaltungen in dieser Auswahl.</p>';
+  }
+
   render();
 
-  // (Optional) Falls du auch im Formular die neuen Felder sammeln willst,
-  // könntest du dort Felder für Kosten, Veranstalter, Kontakt ergänzen
-  // und in den mailto-Body aufnehmen.
 </script>
 </body>
 </html>

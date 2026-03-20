@@ -10,7 +10,9 @@
   kosten: "",
   referent: "",
   veranstalter: "",
-  kontakt: ""
+  kontakt: "",
+  region: "",  // basel | zuerich | bern | anderswo
+  konzept: false
 }
 */
 
@@ -25,7 +27,9 @@ window.EVENTS = [
   kosten: "gratis / Kollekte",
   referent: "Claudia Wirthlin",
   veranstalter: "mozaik Quartierzeitung",
-  kontakt: ""
+  kontakt: "",
+  region: "basel",
+  konzept: false
 },
   {
   titel: "Klybeckstrasse. Trouvaillen auf dem Weg vom Claraplatz zum Klybeckschlösschen",
@@ -37,7 +41,9 @@ window.EVENTS = [
   kosten: "gratis / Kollekte",
   referent: "Sabine Braunschweig und Hans-Georg Heimann",
   veranstalter: "mozaik Quartierzeitung",
-  kontakt: ""
+  kontakt: "",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Spaziergang mit Gedichten und Musik",
@@ -49,7 +55,9 @@ window.EVENTS = [
   kosten: "CHF 15 / 10",
   referent: "Victor Saudan und Philippe Koerper",
   veranstalter: "Museum Allschwil – Haus für Kultur und Geschichte",
-  kontakt: "museumallschwil@allschwil.bl.ch"
+  kontakt: "museumallschwil@allschwil.bl.ch",
+  region: "basel",
+  konzept: false
 },
 
   {
@@ -62,7 +70,9 @@ window.EVENTS = [
   kosten: "kostenlos",
   referent: "Julia Rüegger",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
     {
   titel: "Auf den Spuren der Basler Dichter Werner Lutz und Rainer Brambach",
@@ -74,7 +84,9 @@ window.EVENTS = [
   kosten: "CHF 35 / CHF 20",
   referent: "Martina Kuoni und Julia Rüegger",
   veranstalter: "Literaturspur",
-  kontakt: "info@literaturspur.ch"
+  kontakt: "info@literaturspur.ch",
+  region: "basel",
+  konzept: false
 },
   {
   titel: "The Long Way Home. Kollektiver Nachtspaziergang",
@@ -86,7 +98,9 @@ window.EVENTS = [
   kosten: "",
   referent: "San Keller und Julia Rüegger",
   veranstalter: "",
-  kontakt: ""
+  kontakt: "",
+  region: "basel",
+  konzept: true
 },
   {
   titel: "Der Wanderformel auf der Spur",
@@ -98,7 +112,9 @@ window.EVENTS = [
   kosten: "CHF 15 / 10",
   referent: "Marie-Anne Lerjen und Beat Gugger",
   veranstalter: "Das Gelbe Haus",
-  kontakt: "info@dasgelbehausflims.ch"
+  kontakt: "info@dasgelbehausflims.ch",
+  region: "anderswo",
+  konzept: false
 },
     {
   titel: "Religion – Natur, Landschaft und Wandern",
@@ -110,7 +126,9 @@ window.EVENTS = [
   link: "https://www.vhsbb.ch",
   kosten: "CHF 100",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@vhsbb.ch"
+  kontakt: "info@vhsbb.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Gehen",
@@ -121,7 +139,9 @@ window.EVENTS = [
   link: "https://gehstück.ch",
   kosten: "Kollekte",
   veranstalter: "Léonard Wiesendanger",
-  kontakt: "info@gehstueck.ch"
+  kontakt: "info@gehstueck.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Träumereien eines einsamen Spaziergängers",
@@ -132,7 +152,9 @@ window.EVENTS = [
   link: "https://gehstück.ch",
   kosten: "Kollekte",
   veranstalter: "Léonard Wiesendanger",
-  kontakt: "info@gehstueck.ch"
+  kontakt: "info@gehstueck.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Auch ich habe in Arkadien gelebt",
@@ -143,7 +165,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@gehstueck.ch"
+  kontakt: "info@gehstueck.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Landschaft ist darstellbar / nicht",
@@ -154,7 +178,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Grenzgang",
@@ -166,7 +192,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Der Spaziergang",
@@ -177,7 +205,9 @@ window.EVENTS = [
   link: "https://gehstück.ch",
   kosten: "Kollekte",
   veranstalter: "Léonard Wiesendanger",
-  kontakt: "info@gehstueck.ch"
+  kontakt: "info@gehstueck.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Workshop. Pilgern in 100 Schritten",
@@ -189,7 +219,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Gehstück. Reise an den schönsten Ort",
@@ -200,7 +232,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Lesekreis Landschaft: Warum ist Landschaft schön? Die Spaziergangswissenschaft",
@@ -211,7 +245,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Spaziergang. Der Blick der Städter:in über die Stadtmauern",
@@ -222,7 +258,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Adaption fürs Gehen. Gehen",
@@ -233,7 +271,9 @@ window.EVENTS = [
   link: "https://gehstück.ch",
   kosten: "Kollekte",
   veranstalter: "Léonard Wiesendanger",
-  kontakt: "info@gehstueck.ch"
+  kontakt: "info@gehstueck.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Spaziergang im Stadtverkehr. Zur Geschichte des städtischen Freiraums",
@@ -244,7 +284,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Rettet die Altstadt. Aktion Nadelberg vom 11. März 1961",
@@ -255,7 +297,9 @@ window.EVENTS = [
   link: "",
   kosten: "kostenlos",
   veranstalter: "UB Ausstellung: Sehend denken",
-  kontakt: ""
+  kontakt: "",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Gehstück. Reise an den schönsten Ort",
@@ -266,7 +310,9 @@ window.EVENTS = [
   link: "https://gehstück.ch",
   kosten: "kostenlos",
   veranstalter: "Léonard Wiesendanger",
-  kontakt: "info@gehstueck.ch"
+  kontakt: "info@gehstueck.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "„Religions“-Promenadologie. Wo bitte geht’s denn hier zur Religion?",
@@ -278,7 +324,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Tour de Bale (1)",
@@ -290,7 +338,9 @@ window.EVENTS = [
   link: "https://www.instagram.com/office.for.peripatetic.design/",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Tour de Bale (2)",
@@ -302,7 +352,9 @@ window.EVENTS = [
   link: "https://www.instagram.com/office.for.peripatetic.design/",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Kulturstadtplan. Buchraum Basel",
@@ -313,7 +365,9 @@ window.EVENTS = [
   link: "https://buchraumbasel.ch/kulturstadtplan",
   kosten: "kostenlos",
   veranstalter: "Verein BuchRaumBasel",
-  kontakt: ""
+  kontakt: "",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Spaziergangswissenschaft trifft Literatur. Lucius und Annemarie Burckhardt mit Robert Walser im Gespräch",
@@ -324,7 +378,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Rating Seats",
@@ -335,7 +391,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Das Basler Hafenareal in der Entwicklung. Ein städtebauliches Porträt",
@@ -347,7 +405,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "flanör",
@@ -358,7 +418,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "anderswo",
+  konzept: false
 },
 {
   titel: "Die unsichtbare Stadt. Italo Calvino",
@@ -369,7 +431,9 @@ window.EVENTS = [
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
   veranstalter: "Lokal für Raumbegehung",
-  kontakt: "info@lokal-fuer-raumbegehung.ch"
+  kontakt: "info@lokal-fuer-raumbegehung.ch",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Gespräch in der Bibliothek: Lucius Burckhardt",
@@ -380,7 +444,9 @@ window.EVENTS = [
   link: "",
   kosten: "kostenlos",
   veranstalter: "FHNW Bibliothek Muttenz",
-  kontakt: ""
+  kontakt: "",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "jane’s walk",
@@ -391,7 +457,9 @@ window.EVENTS = [
   link: "https://janeswalk.org/",
   kosten: "kostenlos",
   veranstalter: "",
-  kontakt: ""
+  kontakt: "",
+  region: "basel",
+  konzept: false
 },
 {
   titel: "Schreib-Walk-Shop. Zu den Sternen",
@@ -403,7 +471,9 @@ window.EVENTS = [
   link: "https://www.lerjentours.ch/zu-den-sternen/",
   kosten: "CHF 15 / CHF 10",
   veranstalter: "litar (Ausstellung: Merz Welt)",
-  kontakt: "info@litar.ch"
+  kontakt: "info@litar.ch",
+  region: "zuerich",
+  konzept: false
 },
 {
   titel: "WALKING – Denken in Bewegung",
@@ -414,7 +484,9 @@ window.EVENTS = [
   link: "https://ilea.art/",
   kosten: "",
   veranstalter: "ILEA",
-  kontakt: "info@ilea.art"
+  kontakt: "info@ilea.art",
+  region: "anderswo",
+  konzept: false
 },
 {
   titel: "Lucius Burckhardt Convention IV",
@@ -425,6 +497,8 @@ window.EVENTS = [
   link: "https://www.lucius-burckhardt.org/Deutsch/Convention/4.Convention.html",
   kosten: "kostenlos",
   veranstalter: "Prof. Martin Schmitz",
-  kontakt: ""
+  kontakt: "",
+  region: "anderswo",
+  konzept: false
 }
   ];
