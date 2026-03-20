@@ -67,8 +67,8 @@ window.EVENTS = [
   beschr: "Ein Gehstück ist ein Text, der für das Gehen geschrieben oder adaptiert wurde. Wir feiern das Erscheinen dreier Versuche, ein für das Lesen und Gehen taugliches Format zu finden: Die Natur (Georg Christoph Tobler, 1784), Ein Zimmer für sich allein (Virginia Woolf, 1929) und Hitze Stau (LJVW, 2025). Nach einigen einleitenden Worten wählt jede Teilnehmer*in einen der drei Texte und begibt sich selbständig auf den Weg. Den Abschluss bildet ein gemeinsames Picknick. Dauer ca. 1.5h mit anschliessendem Picknick. Rollstuhlgängig. Ausweichdatum für nasse Tage: 04.07.2026.",
   link: "https://lokal-fuer-raumbegehung.ch",
   kosten: "kostenlos",
-  referent: "Elea Bornand und Léonard Wiesendanger",
-  veranstalter: "Lokal für Raumbegehung (spaz Verlag)",
+  referent: "Elea Bornand und Léonard Wiesendanger (spaz Verlag)",
+  veranstalter: "Lokal für Raumbegehung",
   kontakt: "info@lokal-fuer-raumbegehung.ch",
   region: "basel",
   konzept: true
@@ -169,7 +169,7 @@ window.EVENTS = [
   veranstalter: "lerjentours",
   kontakt: "info@lerjentours.ch",
   region: "zuerich",
-  konzept: false
+  konzept: true
 },
   {
   titel: "Basel an der Aare",
