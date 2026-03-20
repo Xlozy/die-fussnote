@@ -141,7 +141,7 @@ window.EVENTS = [
   veranstalter: "StattLand und Bern Welcome",
   kontakt: "info@stattland.ch",
   region: "bern",
-  konzept: true
+  konzept: false
 },
   {
   titel: "Nachtwanderung durch Distributionslandschaften (A1): Kirchberg — Bern Wankdorf",
