@@ -43,6 +43,29 @@
     .title{font-weight:600}
     .meta{color:var(--muted);font-size:14px;margin-top:2px}
     .desc{margin-top:6px}
+
+    /* --- Past archive: collapsible section --- */
+    .past-archive summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .past-archive summary::-webkit-details-marker { display: none; }
+    .past-archive summary h3 {
+      margin: 24px 0 12px;
+    }
+    .past-archive summary::after {
+      content: "+";
+      color: var(--muted);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .past-archive[open] summary::after {
+      content: "−";
+    }
     .grid{display:grid;gap:10px}
     .box{border:1px solid var(--line);padding:14px;border-radius:8px;background:#fff}
     a{color:var(--link);text-decoration:none}
@@ -167,11 +190,11 @@
     </section>
 
     <!-- Vergangene Termine -->
-    <section class="section" id="past">
-      <h3>Vergangene Veranstaltungen</h3>
+    <details class="section past-archive" id="past">
+      <summary><h3>Vergangene Veranstaltungen</h3></summary>
       <div class="tabs" id="past-tabs"></div>
       <div id="past-list"></div>
-    </section>
+    </details>
 
   </div>
 
@@ -199,7 +222,7 @@
     { key: "zuerich",  label: "Zürich" },
     { key: "bern",     label: "Bern" },
     { key: "anderswo", label: "Anderswo" },
-    { key: "konzepte", label: "Konzepte" }
+    { key: "konzepte", label: "Geh-Konzepte" }
   ];
 
   // --- State ---

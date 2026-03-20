@@ -17,6 +17,104 @@
 */
 
 window.EVENTS = [ 
+  {
+  titel: "Nachtwanderung durch Distributionslandschaften (A1): Kirchberg — Bern Wankdorf",
+  datum: "2026-04-15",
+  zeit: "ab 23:30",
+  ort: "Kirchberg-Alchenflüh (Haltestelle)",
+  beschr: "Letzte Etappe der zweiten Saison von San Kellers Nachtwanderungen entlang der Autobahn A1. Seit November 2025 führt die Route in sieben Etappen von Zürich-Seebach nach Bern-Wankdorf. Im Zentrum steht die A1 als Kathedrale der Gegenwart – eine öffentlich finanzierte Infrastruktur, gebaut zur Beschleunigung, längst überholt von digitalen Datenströmen. 19 km durch die Nacht, über Haupt- und Nebenstrassen, Forst- und Landwirtschaftswege, immer möglichst nah entlang der A1. Gestartet wird um 23:30 Uhr beim nächstgelegenen Bahnhof. In den frühen Morgenstunden endet die Etappe an einer Haltestelle des öffentlichen Verkehrs. Keine Anmeldung nötig – die Verbindlichkeit muss von innen kommen. Die Wanderung findet bei jeder Witterung statt. Passende Kleidung und ein Blick auf den Wetterbericht empfohlen.",
+  link: "https://nachtwandern.com/",
+  kosten: "",
+  referent: "San Keller",
+  veranstalter: "",
+  kontakt: "+41 79 542 49 67",
+  region: "anderswo",
+  konzept: true
+},
+  {
+  titel: "gehen ruhen ein feuer machen (24h)",
+  datum: "2026-03-28",
+  zeit: "14:00",
+  ort: "Kanton Zürich (genauere Angaben nach Anmeldung)",
+  beschr: "lerjentours lädt in diesem Walkshop zum gemeinsamen Unterwegssein im Gehen, im Still Werden und am Feuer sitzen – und kochen. Wir kommen in Bewegung und zur Ruhe, übernachten draussen und gehen in Kontakt mit unseren Sinnen und unserer natürlichen Mitwelt. Start: Samstag 28. März 2026, 14 Uhr. Ende: Sonntag 29. März 2026, 14 Uhr. Anforderungen: ca. 2.5 Stunden wandern mit Gepäck, draussen schlafen unter freiem Himmel. Plätze beschränkt. Weiteres Datum: 16./17. Mai 2026.",
+  link: "https://www.lerjentours.ch",
+  kosten: "CHF 80 (exkl. Lebensmittel)",
+  referent: "Marie-Anne Lerjen",
+  veranstalter: "lerjentours",
+  kontakt: "info@lerjentours.ch",
+  region: "zuerich",
+  konzept: false
+},
+  {
+  titel: "Basel an der Aare",
+  datum: "2026-03-26",
+  zeit: "15:00-16:00",
+  ort: "Bergstation Marzilibahn, Bern",
+  beschr: "Eine Basler Stadtführung? In Bern?! Das ist ja absurd! Mit «Basel an der Aare» schlendern Sie mit Benedikt Meyer durch die Stadt am Rhein – und das ganz bequem vor der Berner Haustür. Eine aberwitzige Spielerei, ein geistiger Bocksprung, ein stadtführerischer Salto rückwärts. Für alle, die sich drauf einlassen. Dauer 60 Minuten. Reservation erforderlich. Max. 20 Personen. Im Rahmen des Stadtrundgangfestivals Bern.",
+  link: "https://stadtrundgangfestival.ch/",
+  kosten: "CHF 30 / 20 / 10",
+  referent: "Benedikt Meyer",
+  veranstalter: "Stadtrundgangfestival Bern",
+  kontakt: "",
+  region: "bern",
+  konzept: true
+},
+  {
+  titel: "Sorgetragend im Stadtraum. Ein experimenteller Wahrnehmungsspaziergang",
+  datum: "2026-03-26",
+  zeit: "13:00-14:30",
+  ort: "Kornhausplatz 18, Bern (vor dem Eingang Kornhausforum)",
+  beschr: "Die Wahrnehmung der gebauten Umwelt ist abhängig von individuellen Erfahrungen, der eigenen Sozialisierung und somit auch von Bildung, Kultur, Herkunft, Geschlecht oder Alter. Auf dem Spaziergang wird bewusst, wie unterschiedlich wir die Stadt erleben. Wir erfahren, wie sich der öffentliche Raum anfühlt, wenn wir Care-Arbeit leisten oder selbst auf Fürsorge angewiesen sind. So entwickeln wir ein erweitertes Verständnis vom Stadtraum, bei dem Gender, soziale Gerechtigkeit und Diversität im Zentrum stehen. Dauer 90 Minuten. Reservation erforderlich. Max. 20 Personen. Im Rahmen des Stadtrundgangfestivals Bern.",
+  link: "https://stadtrundgangfestival.ch/",
+  kosten: "CHF 30 / 20 / 10",
+  referent: "Henriette Lutz",
+  veranstalter: "Stadtrundgangfestival Bern",
+  kontakt: "",
+  region: "bern",
+  konzept: false
+},
+  {
+  titel: "Filmvorführung: «Barbara Buser – Pionierin der Nachhaltigkeit». Im Anschluss Rundgang",
+  datum: "2026-04-19",
+  zeit: "10:00-14:00",
+  ort: "kult.kino, Basel",
+  beschr: "Der Dokumentarfilm zeigt die Architektin Barbara Buser, die das Denken über Baukultur, Wiederverwendung und Kreislaufwirtschaft in der Schweiz entscheidend geprägt hat (Prix Meret Oppenheim 2020). Im Anschluss ist Barbara Buser persönlich vor Ort. Nach einer kurzen Stärkung im Kino begeben wir uns gemeinsam zum Franck-Areal, wo wir Einblicke in den laufenden Transformationsprozess erhalten. Produzent Peter Zwierko begleitet den Rundgang, Léonard Wiesendanger eröffnet zusätzliche Perspektiven im Sinne der Spaziergangswissenschaft. Die Veranstaltung ist als zusammenhängendes Format konzipiert. Anmeldung erforderlich. Begrenzte Platzzahl.",
+  link: "https://architekturdialoge.ch",
+  kosten: "kostenfrei",
+  referent: "Barbara Buser, Peter Zwierko und Léonard Wiesendanger",
+  veranstalter: "Architektur Dialoge",
+  kontakt: "info@architekturdialoge.ch",
+  region: "basel",
+  konzept: false
+},
+  {
+  titel: "Filmvorführung: «Asphalte Public». Im Anschluss Stadtspaziergang",
+  datum: "2026-04-18",
+  zeit: "10:00-13:00",
+  ort: "kult.kino, Basel",
+  beschr: "Der Dokumentarfilm «Asphalte Public» (77 Min.) eröffnet neue Perspektiven auf den öffentlichen Raum. Am Beispiel des Place de l'Esplanade zeigt der Film, wie Architektur, Stadtplanung und Kunst unseren Alltag prägen. Im Anschluss Stadtspaziergang durch Basel mit Marcel Scheible, der die filmischen Themen mit dem realen Stadtraum verbindet. Produzent Gregor Frei begleitet den Rundgang, Léonard Wiesendanger eröffnet zusätzliche Perspektiven im Sinne der Spaziergangswissenschaft nach Lucius Burckhardt. Die Veranstaltung ist als zusammenhängendes Format konzipiert. Anmeldung erforderlich. Begrenzte Platzzahl.",
+  link: "https://architekturdialoge.ch",
+  kosten: "kostenfrei",
+  referent: "Marcel Scheible, Gregor Frei und Léonard Wiesendanger",
+  veranstalter: "Architektur Dialoge",
+  kontakt: "info@architekturdialoge.ch",
+  region: "basel",
+  konzept: false
+},
+  {
+  titel: "Filmische Begegnung: Le Corbusier x Lucius Burckhardt (Kurzfilme)",
+  datum: "2026-04-17",
+  zeit: "18:00-20:00",
+  ort: "kult.kino, Basel",
+  beschr: "Zum Auftakt des Architektur-und-Film-Wochenendes zeigen wir den Film «Le Corbusier» von Carlos Vilardebo und stöbern in Kurzfilmen zu Lucius Burckhardt. Le Corbusier nutzte das Medium Film, um seine Visionen von Bewegung und Perspektive lebendig werden zu lassen. Burckhardt entwickelte mit seiner Spaziergangswissenschaft eine Methode, die uns lehrt, unsere Umwelt mit allen Sinnen zu erkunden. Im Anschluss Diskussion im Foyer über die Wirkung dieser Ansätze in heutiger Architekturvermittlung und Stadtforschung. Anmeldung erforderlich. Begrenzte Platzzahl.",
+  link: "https://architekturdialoge.ch",
+  kosten: "kostenfrei",
+  referent: "Marcel Bächtiger und Léonard Wiesendanger",
+  veranstalter: "Architektur Dialoge",
+  kontakt: "info@architekturdialoge.ch",
+  region: "basel",
+  konzept: false
+},
     {
   titel: "Elsässerstrasse. Wohnen, Leben, Arbeiten an der Elsässerstrasse vom Zollstübli bis zum Badhüsli",
   datum: "2026-04-25",
@@ -420,7 +518,7 @@ window.EVENTS = [
   veranstalter: "Lokal für Raumbegehung",
   kontakt: "info@lokal-fuer-raumbegehung.ch",
   region: "anderswo",
-  konzept: false
+  konzept: true
 },
 {
   titel: "Die unsichtbare Stadt. Italo Calvino",
