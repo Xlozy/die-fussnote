@@ -88,7 +88,7 @@ window.EVENTS = [
   konzept: false
 },
 {
-  titel: "WALKING – Denken in Bewegung",
+  titel: "WALKING – Denken in Bewegung (9.-12. September 2026)",
   datum: "2026-09-11",
   zeit: "",
   ort: "Lokal für Raumbegehung / Hafenareal, Basel",
