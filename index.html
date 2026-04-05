@@ -2,7 +2,7 @@
 <html lang="de-CH">
 <head>
   <meta charset="utf-8">
-  <title>Die Fußnote – Agenda für Gehkultur</title>
+  <title>Die Fußnote – Agenda/Archiv für Gehkultur</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="shortcut icon" href="/favicon.ico">  
@@ -94,10 +94,23 @@
     }
 
     /* --- Region Tabs --- */
+    .filter-bar {
+      display: flex;
+      align-items: baseline;
+      gap: 0;
+      margin-bottom: 4px;
+    }
+    .filter-label {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+      white-space: nowrap;
+      padding: 6px 0;
+    }
     .tabs {
       display: flex;
       gap: 0;
-      margin-bottom: 16px;
     }
     .tab {
       padding: 6px 14px;
@@ -113,9 +126,6 @@
       font-family: inherit;
       white-space: nowrap;
     }
-    .tab:first-child {
-      padding-left: 0;
-    }
     .tab:hover {
       color: var(--fg);
     }
@@ -128,14 +138,40 @@
       margin-left: 3px;
     }
 
-    /* small screens: scrollable tabs */
+    /* --- Konzept filter --- */
+    .konzept-filter {
+      margin-bottom: 16px;
+    }
+    .konzept-label {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+    .konzept-label:hover {
+      color: var(--fg);
+    }
+    .konzept-label input[type="checkbox"] {
+      accent-color: var(--fg);
+      margin: 0;
+      position: relative;
+      top: 1px;
+    }
+
+    /* small screens */
     @media (max-width:679px){
-      .tabs {
+      .filter-bar {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
       }
       .tab {
         padding: 6px 10px;
+        font-size: 13px;
+      }
+      .filter-label {
         font-size: 13px;
       }
     }
@@ -147,13 +183,13 @@
   <div class="wrap">
     <header>
       <h1>Die Fußnote</h1>
-      <h2>Agenda für Gehkultur<sup>1</sup></h2>
+      <h2>Agenda / Archiv für Gehkultur<sup>1</sup></h2>
       <p class="lead">Versammelt Veranstaltungen, die das Gehen zum Gegenstand oder zur Methode nehmen.</p>
     </header>
 
     <section class="section">
       <h3>Veranstaltung vorschlagen</h3>
-      <p>Hinweise per E-Mail an <a href="mailto:info@lokal-fuer-raumbegehung">info@lokal-fuer-raumbegehung.ch</a></p>
+      <p>Hinweise per E-Mail an <a href="mailto:info@lokal-fuer-raumbegehung.ch">info@lokal-fuer-raumbegehung.ch</a></p>
       <p>Angaben: Datum, Zeit, Ort, Kosten, Veranstalter:in, Titel, Kurzbeschrieb (ggf. Link), Kontakt (E-Mail).</p>
     </section>
 
@@ -162,7 +198,7 @@
       <p>
         Das Lokal für Raumbegehung ist ein kulturwissenschaftlicher Offspace,
         inspiriert von der Spaziergangswissenschaft. Es hat zu Semesterzeiten
-        an zwei Tagen in der Woche offen und stellt eine umfangreiche
+        an zwei bis drei Tagen in der Woche offen und stellt eine umfangreiche
         Büchersammlung zur Verfügung. Es finden in regelmässigen Abständen
         Veranstaltungen statt zu den Themen Stadt, Landschaft und Wahrnehmung
         im 21. Jahrhundert.
@@ -181,18 +217,26 @@
     <br>
     <hr>
     <br>
-    
+
     <!-- Kommende Termine -->
-    <section class="section" id="upcoming">
-      <h3>Kommende Veranstaltungen</h3>
-      <div class="tabs" id="upcoming-tabs"></div>
+    <details class="section past-archive" id="upcoming" open>
+      <summary><h3>Kommende Veranstaltungen</h3></summary>
+      <div class="filter-bar">
+        <span class="filter-label">Region:</span>
+        <div class="tabs" id="upcoming-tabs"></div>
+      </div>
+      <div class="konzept-filter" id="upcoming-konzept"></div>
       <div id="upcoming-list"></div>
-    </section>
+    </details>
 
     <!-- Vergangene Termine -->
     <details class="section past-archive" id="past">
       <summary><h3>Vergangene Veranstaltungen</h3></summary>
-      <div class="tabs" id="past-tabs"></div>
+      <div class="filter-bar">
+        <span class="filter-label">Region:</span>
+        <div class="tabs" id="past-tabs"></div>
+      </div>
+      <div class="konzept-filter" id="past-konzept"></div>
       <div id="past-list"></div>
     </details>
 
@@ -219,20 +263,22 @@
   const REGIONS = [
     { key: "alle",     label: "Alle" },
     { key: "basel",    label: "Basel" },
-    { key: "zuerich",  label: "Zürich" },
     { key: "bern",     label: "Bern" },
-    { key: "anderswo", label: "Anderswo" },
-    { key: "konzepte", label: "Geh-Konzept (expliziert)" }
+    { key: "zuerich",  label: "Zürich" },
+    { key: "anderswo", label: "Anderswo" }
   ];
 
   // --- State ---
   let activeRegion = { upcoming: "alle", past: "alle" };
+  let konzeptOnly = { upcoming: false, past: false };
 
   // --- DOM ---
   const $upTabs  = document.getElementById('upcoming-tabs');
   const $upList  = document.getElementById('upcoming-list');
+  const $upKonzept = document.getElementById('upcoming-konzept');
   const $pastTabs = document.getElementById('past-tabs');
   const $pastList = document.getElementById('past-list');
+  const $pastKonzept = document.getElementById('past-konzept');
 
   // --- Helpers ---
   function fmtDate(iso){
@@ -242,10 +288,11 @@
 
   function isEmail(s){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s||"").trim()); }
 
-  function filterEvents(events, key){
-    if(key === "alle") return events;
-    if(key === "konzepte") return events.filter(e => e.konzept === true);
-    return events.filter(e => e.region === key);
+  function filterEvents(events, key, showKonzeptOnly){
+    let filtered = events;
+    if(key !== "alle") filtered = filtered.filter(e => e.region === key);
+    if(showKonzeptOnly) filtered = filtered.filter(e => e.konzept === true);
+    return filtered;
   }
 
   function card(ev) {
@@ -291,9 +338,9 @@
 
   // --- Count per tab ---
   function countByTab(events){
-    const counts = { alle: events.length, konzepte: events.filter(e => e.konzept === true).length };
+    const counts = { alle: events.length };
     REGIONS.forEach(r => {
-      if(r.key !== "alle" && r.key !== "konzepte") counts[r.key] = events.filter(e => e.region === r.key).length;
+      if(r.key !== "alle") counts[r.key] = events.filter(e => e.region === r.key).length;
     });
     return counts;
   }
@@ -302,9 +349,6 @@
   function buildTabs(container, section, counts){
     container.innerHTML = "";
     REGIONS.forEach(r => {
-      // Tabs mit 0 Events ausblenden (ausser "Alle")
-      if(r.key !== "alle" && counts[r.key] === 0) return;
-
       const btn = document.createElement("button");
       btn.className = "tab" + (activeRegion[section] === r.key ? " active" : "");
       btn.innerHTML = `${r.label}<span class="count">${counts[r.key]}</span>`;
@@ -316,21 +360,48 @@
     });
   }
 
+  // --- Build konzept filter ---
+  function buildKonzeptFilter(container, section, events){
+    const konzeptCount = events.filter(e => e.konzept === true).length;
+    if(konzeptCount === 0){
+      container.innerHTML = "";
+      return;
+    }
+    const label = document.createElement("label");
+    label.className = "konzept-label";
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.checked = konzeptOnly[section];
+    cb.addEventListener("change", () => {
+      konzeptOnly[section] = cb.checked;
+      render();
+    });
+    const span = document.createElement("span");
+    span.textContent = "Nur Veranstaltungen, die ihr Geh-Konzept in der Beschreibung ausformulieren.";
+    label.appendChild(cb);
+    label.appendChild(span);
+    container.innerHTML = "";
+    container.appendChild(label);
+  }
+
   // --- Render ---
   function render(){
     const { upcoming, past } = splitEvents();
 
-    // Counts
     const upCounts = countByTab(upcoming);
     const pastCounts = countByTab(past);
 
-    // Tabs
     buildTabs($upTabs, "upcoming", upCounts);
     buildTabs($pastTabs, "past", pastCounts);
 
-    // Filtered lists
-    const upFiltered = filterEvents(upcoming, activeRegion.upcoming);
-    const pastFiltered = filterEvents(past, activeRegion.past);
+    // Konzept filter (based on region-filtered set)
+    const upRegionFiltered = filterEvents(upcoming, activeRegion.upcoming, false);
+    const pastRegionFiltered = filterEvents(past, activeRegion.past, false);
+    buildKonzeptFilter($upKonzept, "upcoming", upRegionFiltered);
+    buildKonzeptFilter($pastKonzept, "past", pastRegionFiltered);
+
+    const upFiltered = filterEvents(upcoming, activeRegion.upcoming, konzeptOnly.upcoming);
+    const pastFiltered = filterEvents(past, activeRegion.past, konzeptOnly.past);
 
     $upList.innerHTML = upFiltered.length
       ? upFiltered.map(card).join('')
