@@ -16,7 +16,23 @@
 }
 */
 
+
 window.EVENTS = [ 
+  {
+  titel: "du dedans au dehors » / « vo d’inne nach d’usse",
+  datum: "2026-04-24",
+  zeit: "19:30",
+  ort: "Einfamilienhaus an der Oberdorfstrasse 33, 4118 Rodersdorf",
+  beschr: "Ein Einfamilienhaus, eine Terrasse, ein Garten. Poetisch – musikalisches Triptychon des Hinausgehens und Herauskommens. Erstaufführung. Texte auf Französisch und Solothurner Mundart. Victor Saudan, Text und Stimme, Barbara Gasser, Cello.",
+  link: "https://victorsaudan.fr",
+  kosten: "Kollekte",
+  referent: "Victor Saudan und Barbara Gasser",
+  veranstalter: "Zwischenklang – eine Serie von Hausmusik in Klang und Wort organisiert von der Musikerin Barbara Gasser",
+  kontakt: "saudanvictor@gmail.com",
+  region: "basel",
+  konzept: false
+},
+
   {
   titel: "Gehstück: Wasser Schiene Asphalt",
   datum: "2026-04-26",
