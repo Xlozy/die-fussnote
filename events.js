@@ -20,6 +20,24 @@
 
 
 window.EVENTS = [ 
+
+  {
+  titel: "Jane's Walks",
+  datum: "2026-05-01",
+  datumEnde: "2026-05-03",  // optional: für mehrtägige Events oder Programme
+  zeit: "divers",
+  ort: "divers",
+  beschr: "Jane’s Walk sind gemeinsame Spaziergänge mit Erzählungen, inspiriert von der amerikanischen Aktivistin Jane Jacobs. Schliessen Sie sich an und entdecken Sie Ihr Quartier neu, aus unterschiedlichen Blickwinkeln, begleitet von persönlichen Erfahrungen, Anekdoten und Geschichten aus der Nachbarschaft.",
+  link: "https://janeswalk.ch/",
+  kosten: "kostenlos",
+  referent: "divers",
+  veranstalter: "Walks in der Schweiz koordiniert von Fussverkehr Schweiz",
+  kontakt: "",
+  region: "anderswo",
+  konzept: false,
+  programm: true  // true = Veranstaltungsprogramm (erscheint im "Laufende Programme"-Block)
+}
+
 {
   titel: "Frauenstadtrundgang Basel",
   datum: "2026-04-22",
