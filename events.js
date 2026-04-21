@@ -36,7 +36,7 @@ window.EVENTS = [
   {
   titel: "Gehstück: Wasser Schiene Asphalt",
   datum: "2026-04-26",
-  zeit: "15:00-17:00",
+  zeit: "15:00",
   ort: "Badischer Bahnhof, Basel",
   beschr: "Weniger Verkehr hier heisst mehr Verkehr dort. Man kann diesen Strom nicht verhindern, nur lenken. Mühsam, langsam und teuer bauen wir Kanäle, die bald wieder überlaufen. Wir wehren der Flut, doch bändigen können wir sie nicht. Der Verkehr wächst, das ist seine Natur. Er macht, was er will, und füllt die Strassen und die Köpfe. Verängstigt bauen wir Abflussrinnen, aber er ist stärker als wir. Unsere Verkehrspolitik gehorcht dem Prinzip ‚aktiver Fatalismus'. Dauer ca. 2h. Findet bei jedem Wetter statt.",
   link: "https://lokal-fuer-raumbegehung.ch",
