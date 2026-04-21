@@ -142,8 +142,9 @@ window.EVENTS = [
   konzept: false
 },
 {
-  titel: "WALKING – Denken in Bewegung (9.-12. September 2026)",
+  titel: "WALKING – Denken in Bewegung",
   datum: "2026-09-11",
+  datumEnde: "2026-09-13",
   zeit: "",
   ort: "Lokal für Raumbegehung / Hafenareal, Basel",
   beschr: "Für seine dritte Ausgabe kommt WALKING nach Basel. Inspiriert von der Promenadologie (Lucius und Annemarie Burckhardt) rückt die Tagung das Gehen als erkenntnisstiftende Praxis in den Mittelpunkt und bringt Positionen aus Kunst, Philosophie und Sozialwissenschaft zusammen. In Zeiten von Ökokrise, Urbanisierungsdruck und digitaler Raumüberformung stellt sich die Frage: Wie lernen wir neu wahrnehmen? Die Tagung bietet Gelegenheit, WALKING aus künstlerischer, wissenschaftlicher, gestalterischer oder aktivistischer Perspektive zu erleben, mitzugestalten und sich mit Gleichgesinnten auszutauschen. Auftakt am Freitag 11.9. im Lokal für Raumbegehung, Tagung am Samstag und Sonntag 12./13.9. im Hafenareal. Weitere Angaben auf ilea.art/blog.",
