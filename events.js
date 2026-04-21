@@ -36,7 +36,7 @@ window.EVENTS = [
   region: "anderswo",
   konzept: false,
   programm: true  // true = Veranstaltungsprogramm (erscheint im "Laufende Programme"-Block)
-}
+},
 
 {
   titel: "Frauenstadtrundgang Basel",
@@ -50,6 +50,7 @@ window.EVENTS = [
   konzept: false,
   programm: true
 },
+
 {
   titel: "flanie® mal marburg – die pe®pipat[h]et[h]ische schule",
   datum: "2026-04-20",
