@@ -3,6 +3,7 @@
 {
   titel: "",
   datum: "YYYY-MM-DD",
+  datumEnde: "YYYY-MM-DD",  // optional: für mehrtägige Events oder Programme
   zeit: "XX:XX-XX:XX",
   ort: "",
   beschr: "",
@@ -12,12 +13,49 @@
   veranstalter: "",
   kontakt: "",
   region: "",  // basel | zuerich | bern | anderswo
-  konzept: false
+  konzept: false,
+  programm: false  // true = Veranstaltungsprogramm (erscheint im "Laufende Programme"-Block)
 }
 */
 
 
 window.EVENTS = [ 
+{
+  titel: "Frauenstadtrundgang Basel",
+  datum: "2026-04-22",
+  datumEnde: "2026-11-28",
+  ort: "Basel",
+  beschr: "Seit 1990 erarbeiten Studierende und Wissenschaftler*innen unkonventionelle Stadtrundgänge in der Region Basel. Erkenntnisse und Fragen aus der aktuellen Frauen- und Geschlechtergeschichte werden spannend und verständlich an ein breites Publikum vermittelt. Auf dem aktuellen Programm stehen 12 verschiedene Rundgänge mit unterschiedlichen Themen, etwa zur Medizingeschichte von Basel, zum Kleinbasel oder dem St. Johannsquartier sowie zur Geschichte der Sorgearbeit.",
+  link: "https://frauenstadtrundgang.ch",
+  veranstalter: "Frauenstadtrundgang Basel",
+  region: "basel",
+  konzept: false,
+  programm: true
+},
+{
+  titel: "flanie® mal marburg – die pe®pipat[h]et[h]ische schule",
+  datum: "2026-04-20",
+  datumEnde: "2026-05-31",
+  ort: "Marburg",
+  beschr: "Neun Spaziergangsformate, acht Mal wöchentlich, von April bis Mai. Der Künstler Konstantinos-Antonios Goutos lädt zum Flanieren ein: Von «StraßenGriechisch für Anfänger», über «Und wo kommst du eigentlich her?» bis «Wald fühlen gehen».",
+  link: "https://konstantinosantoniosgoutos.art.blog/",
+  veranstalter: "Konstantinos Antonios Goutos",
+  region: "anderswo",
+  konzept: false,
+  programm: true
+},
+{
+  titel: "Geh Kultur 1 (2026)",
+  datum: "2026-03-11",
+  datumEnde: "2026-11-12",
+  ort: "Basel",
+  beschr: "Acht Aktionen sind acht denkbaren Dimensionen des Gehens gewidmet. Begleitend finden weitere acht Lektüre- und Gesprächsabende statt. Das Line-up versammelt Personen aus Hochschule, Praxis (z. B. Architektur) und Kultur. Inspiriert von der Spaziergangswissenschaft.",
+  link: "https://www.die-fussnote.ch/geh-kultur-1",
+  veranstalter: "Lokal für Raumbegehung",
+  region: "basel",
+  konzept: false,
+  programm: true
+},
   {
   titel: "du dedans au dehors » / « vo d’inne nach d’usse",
   datum: "2026-04-24",
@@ -36,7 +74,7 @@ window.EVENTS = [
   {
   titel: "Gehstück: Wasser Schiene Asphalt",
   datum: "2026-04-26",
-  zeit: "15:00",
+  zeit: "15:00-17:00",
   ort: "Badischer Bahnhof, Basel",
   beschr: "Weniger Verkehr hier heisst mehr Verkehr dort. Man kann diesen Strom nicht verhindern, nur lenken. Mühsam, langsam und teuer bauen wir Kanäle, die bald wieder überlaufen. Wir wehren der Flut, doch bändigen können wir sie nicht. Der Verkehr wächst, das ist seine Natur. Er macht, was er will, und füllt die Strassen und die Köpfe. Verängstigt bauen wir Abflussrinnen, aber er ist stärker als wir. Unsere Verkehrspolitik gehorcht dem Prinzip ‚aktiver Fatalismus'. Dauer ca. 2h. Findet bei jedem Wetter statt.",
   link: "https://lokal-fuer-raumbegehung.ch",

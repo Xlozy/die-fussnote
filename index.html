@@ -218,6 +218,15 @@
     <hr>
     <br>
 
+    <!-- Laufende Programme (dynamisch) -->
+    <section class="section" id="programme-section">
+      <h3>Laufende Programme</h3>
+      <div id="programme-list"></div>
+    </section>
+
+    <br>
+    <hr>
+
     <!-- Kommende Termine -->
     <details class="section past-archive" id="upcoming" open>
       <summary><h3>Kommende Veranstaltungen</h3></summary>
@@ -273,17 +282,28 @@
   let konzeptOnly = { upcoming: false, past: false };
 
   // --- DOM ---
-  const $upTabs  = document.getElementById('upcoming-tabs');
-  const $upList  = document.getElementById('upcoming-list');
+  const $upTabs    = document.getElementById('upcoming-tabs');
+  const $upList    = document.getElementById('upcoming-list');
   const $upKonzept = document.getElementById('upcoming-konzept');
-  const $pastTabs = document.getElementById('past-tabs');
-  const $pastList = document.getElementById('past-list');
+  const $pastTabs  = document.getElementById('past-tabs');
+  const $pastList  = document.getElementById('past-list');
   const $pastKonzept = document.getElementById('past-konzept');
+  const $progList  = document.getElementById('programme-list');
+  const $progSection = document.getElementById('programme-section');
 
   // --- Helpers ---
   function fmtDate(iso){
     const d = new Date(iso + "T00:00:00");
     return d.toLocaleDateString('de-CH', {weekday:'short', day:'2-digit', month:'2-digit', year:'numeric'});
+  }
+
+  function fmtDateRange(datum, datumEnde){
+    if(!datumEnde) return fmtDate(datum);
+    const start = new Date(datum + "T00:00:00");
+    const end   = new Date(datumEnde + "T00:00:00");
+    const sDay  = start.toLocaleDateString('de-CH', {weekday:'short', day:'2-digit', month:'2-digit'});
+    const eDay  = end.toLocaleDateString('de-CH',   {weekday:'short', day:'2-digit', month:'2-digit', year:'numeric'});
+    return `${sDay} – ${eDay}`;
   }
 
   function isEmail(s){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(s||"").trim()); }
@@ -303,7 +323,7 @@
       : "";
 
     const metaTop = [
-      ev.datum ? fmtDate(ev.datum) : "",
+      ev.datum ? fmtDateRange(ev.datum, ev.datumEnde) : "",
       ev.zeit || "",
       ev.ort || "",
       ev.kosten || ""
@@ -329,11 +349,33 @@
   // --- Split events ---
   function splitEvents(){
     const today = new Date(); today.setHours(0,0,0,0);
-    const upcoming = EVENTS.filter(e => e.datum && new Date(e.datum) >= today)
-                           .sort((a,b) => new Date(a.datum) - new Date(b.datum));
-    const past = EVENTS.filter(e => e.datum && new Date(e.datum) < today)
-                       .sort((a,b) => new Date(b.datum) - new Date(a.datum));
-    return { upcoming, past };
+    const normal = EVENTS.filter(e => !e.programm);
+    const programmes = EVENTS.filter(e => e.programm === true);
+
+    const upcoming = normal
+      .filter(e => e.datum && new Date(e.datum) >= today)
+      .sort((a,b) => new Date(a.datum) - new Date(b.datum));
+
+    const past = normal
+      .filter(e => e.datum && new Date(e.datum) < today)
+      .sort((a,b) => new Date(b.datum) - new Date(a.datum));
+
+    // A programme is "active" if datumEnde >= today (or no datumEnde but datum >= today)
+    const activeProgrammes = programmes.filter(e => {
+      const end = e.datumEnde ? new Date(e.datumEnde + "T00:00:00") : new Date(e.datum + "T00:00:00");
+      return end >= today;
+    }).sort((a,b) => new Date(a.datum) - new Date(b.datum));
+
+    const pastProgrammes = programmes.filter(e => {
+      const end = e.datumEnde ? new Date(e.datumEnde + "T00:00:00") : new Date(e.datum + "T00:00:00");
+      return end < today;
+    });
+
+    // Merge past programmes into past events list, sorted by datum
+    const pastAll = [...past, ...pastProgrammes]
+      .sort((a,b) => new Date(b.datum) - new Date(a.datum));
+
+    return { upcoming, past: pastAll, activeProgrammes };
   }
 
   // --- Count per tab ---
@@ -351,7 +393,7 @@
     REGIONS.forEach(r => {
       const btn = document.createElement("button");
       btn.className = "tab" + (activeRegion[section] === r.key ? " active" : "");
-      btn.innerHTML = `${r.label}<span class="count">${counts[r.key]}</span>`;
+      btn.innerHTML = `${r.label}<span class="count">${counts[r.key] || 0}</span>`;
       btn.addEventListener("click", () => {
         activeRegion[section] = r.key;
         render();
@@ -386,22 +428,30 @@
 
   // --- Render ---
   function render(){
-    const { upcoming, past } = splitEvents();
+    const { upcoming, past, activeProgrammes } = splitEvents();
 
-    const upCounts = countByTab(upcoming);
+    // Laufende Programme
+    if(activeProgrammes.length === 0){
+      $progSection.style.display = "none";
+    } else {
+      $progSection.style.display = "";
+      $progList.innerHTML = activeProgrammes.map(card).join('');
+    }
+
+    const upCounts   = countByTab(upcoming);
     const pastCounts = countByTab(past);
 
-    buildTabs($upTabs, "upcoming", upCounts);
-    buildTabs($pastTabs, "past", pastCounts);
+    buildTabs($upTabs,   "upcoming", upCounts);
+    buildTabs($pastTabs, "past",     pastCounts);
 
     // Konzept filter (based on region-filtered set)
-    const upRegionFiltered = filterEvents(upcoming, activeRegion.upcoming, false);
-    const pastRegionFiltered = filterEvents(past, activeRegion.past, false);
-    buildKonzeptFilter($upKonzept, "upcoming", upRegionFiltered);
-    buildKonzeptFilter($pastKonzept, "past", pastRegionFiltered);
+    const upRegionFiltered   = filterEvents(upcoming, activeRegion.upcoming, false);
+    const pastRegionFiltered = filterEvents(past,     activeRegion.past,     false);
+    buildKonzeptFilter($upKonzept,   "upcoming", upRegionFiltered);
+    buildKonzeptFilter($pastKonzept, "past",     pastRegionFiltered);
 
-    const upFiltered = filterEvents(upcoming, activeRegion.upcoming, konzeptOnly.upcoming);
-    const pastFiltered = filterEvents(past, activeRegion.past, konzeptOnly.past);
+    const upFiltered   = filterEvents(upcoming, activeRegion.upcoming, konzeptOnly.upcoming);
+    const pastFiltered = filterEvents(past,     activeRegion.past,     konzeptOnly.past);
 
     $upList.innerHTML = upFiltered.length
       ? upFiltered.map(card).join('')
