@@ -1,6 +1,6 @@
 
   /*
-{
+  {
   titel: "",
   datum: "YYYY-MM-DD",
   datumEnde: "YYYY-MM-DD",  // optional: für mehrtägige Events oder Programme
@@ -15,11 +15,43 @@
   region: "",  // basel | zuerich | bern | anderswo
   konzept: false,
   programm: false  // true = Veranstaltungsprogramm (erscheint im "Laufende Programme"-Block)
-}
+},
 */
 
 
-window.EVENTS = [ 
+window.EVENTS = [
+  
+  {
+  titel: "The Long Way Home. Kollektiver Nachtspaziergang",
+  datum: "2026-06-12",
+  zeit: "ab 22:00",
+  ort: "Brunnen am Meret Oppenheim Platz",
+  beschr: "Das Format wurde 2003 vom Zürcher Künstler San Keller ins Leben gerufen – während eines ganzen Jahres traf er sich einmal im Monat an der New Yorker Grand Central Station mit einer Gruppe von Menschen, um diese zu Fuss nachhause zu bringen. Dieses Format holen wir jetzt nach Basel. Wir treffen uns am 27.02.2026 um 22.00 Uhr bei der Tramstation Bahnhof St. Johann und bringen uns eine nach der anderen nach Hause. In jedem Zuhause wird eine kurze (bei Bedarf längere) Rast eingelegt, um sich aufzuwärmen und eine kleine Stärkung zu sich zu nehmen, bevor es zurück auf die Strasse geht. Eine Anmeldung ist nicht nötig. Wichtig sind warme Kleidung und warme, bequeme Laufschuhe. Ausserdem sollte jede*r Teilnehmer*in bereit sein, in seinem*ihrem Zuhause einen Moment der Gastfreundlichkeit und eine kleine Stärkung zu gewähren – dabei geht es nicht um fancy Wohnorte oder besondere Delikatessen, sondern um basale Regeneration.",
+  link: "",
+  kosten: "",
+  referent: "San Keller und Julia Rüegger",
+  veranstalter: "",
+  kontakt: "",
+  region: "basel",
+  konzept: true
+},
+
+{
+  titel: "BEL -  rituelles Begehen eines Hügels (das BIEL von Biederthal)",
+  datum: "2026-05-03",
+  datumEnde: "YYYY-MM-DD",  // optional: für mehrtägige Events oder Programme
+  zeit: "11:00-12:30",
+  ort: "FR- 68480 Biederthal",
+  beschr: "In vielen Flurnamen unserer Region ist BEL präsent : Blauen, Belchen, Ballon, Bellingen, Bellach etc. und eben Biel oder Bühl… BEL der keltische Lichtgott ! Gerade an der uralten Achse Mittelmeer – Rhone – Rhein – Nordsee, welche auch Biederthal durchquert (Rämelpass !) finden sich zahlreiche BIEL : sanfte, gleichmässige heilige Hügel, wo die Erde sich Himmel und Sonne nähert. Orte des Übergangs in die Andere Welt. Unsere Performance dankt der Natur für ihre Ewige Wiederkehr. Ihr Ablauf inspiriert sich am Bogen der Sonne von Aufgang zu Untergang. Zu Ehren von BEL lassen wir die Rituale der Freude so in aktueller Form wieder aufleben, welche das Fest von BEL-TAINE (keltischer Sommeranfang) begleiteten.",
+  link: "https://victorsaudan.fr",
+  kosten: "Kollekte",
+  referent: "",
+  veranstalter: "Kulturverein TISSAGE musique et poésie",
+  kontakt: "saudanvictor@gmail.com",
+  region: "basel",  // basel | zuerich | bern | anderswo
+  konzept: false,
+  programm: false  // true = Veranstaltungsprogramm (erscheint im "Laufende Programme"-Block)
+},
 
   {
   titel: "Jane's Walks",
