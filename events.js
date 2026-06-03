@@ -21,6 +21,19 @@
 
 window.EVENTS = [
   
+{
+  titel: "flanie® mal marburg – die pe®pipat[h]et[h]ische schule",
+  datum: "2026-06-01",
+  datumEnde: "2026-06-26",
+  ort: "Marburg",
+  beschr: "Neun Spaziergänge wöchentlich, im Juni. Der Künstler Konstantinos-Antonios Goutos lädt zum Flanieren ein: Von «StraßenGriechisch für Anfänger», über «Und wo kommst du eigentlich her?» bis «Wald fühlen gehen».",
+  link: "https://konstantinosantoniosgoutos.art.blog/",
+  veranstalter: "Konstantinos Antonios Goutos",
+  region: "anderswo",
+  konzept: false,
+  programm: true
+},
+
   {
   titel: "La Ballade du lynx/ Dem Luchs auf der Spur",
   datum: "2026-06-14",
