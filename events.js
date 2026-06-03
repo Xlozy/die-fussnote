@@ -22,6 +22,23 @@
 window.EVENTS = [
   
   {
+  titel: "La Ballade du lynx/ Dem Luchs auf der Spur",
+  datum: "2026-06-14",
+  datumEnde: "YYYY-MM-DD",  // optional: für mehrtägige Events oder Programme
+  zeit: "15:00-17:00",
+  ort: "Naturreservat bei Wolschwiller (Oberes Leimental)",
+  beschr: "Im Rahmen eines Festivals zu Ehren des 20. Geburtags des Naturschutzgebietes von Wollschwiller (Elsass), in dem ein Luchs lebt, findet ein Spaziergang statt zum Thema der Balance. Balance des Luchses im Schnee, des fragilen Gleichgewichts des Naturschutzgebietes, des Lebendigen im Spannungsfeld Mensch/Natur. Der Spaziergang am Rande des Naturschutzgebietes verbindet Texte zum und vom Luchs von Victor Saudan, Klangräume zwischen Saxophon und Naturlauten von Philippe Koerper und Land-Art-Installationen zum Thema Ballance von Matthias Bosshard. Dabei wird versucht, die Landschaft vermehrt aus der Perspektive des Luchses wahrzunehmen. Der Luchs hilft so dem Menschen, im Gehen zum Text im Klangraum selber mehr Balance zu finden.",
+  link: "https://station.illiwap.com/fr/public/cc-sundgau/evenements/explore-ton-jura-2026-jour-1",
+  kosten: "Kollekte",
+  referent: "Victor Saudan",
+  veranstalter: "Natura 2000 / Communauté des communes du Sundgau",
+  kontakt: "saudanvictor@gmail.com",
+  region: "basel",  // basel | zuerich | bern | anderswo
+  konzept: false,
+  programm: false  // true = Veranstaltungsprogramm (erscheint im "Laufende Programme"-Block)
+},
+
+  {
   titel: "The Long Way Home. Kollektiver Nachtspaziergang",
   datum: "2026-06-12",
   zeit: "ab 22:00",
