@@ -68,7 +68,7 @@ window.EVENTS = [
   region: "basel",
   konzept: false,
   programm: true,
-  datumEnde: "2025-07-28"
+  datumEnde: "2026-07-28"
 },
 
 {
