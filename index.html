@@ -219,10 +219,10 @@
     <br>
 
     <!-- Laufende Programme (dynamisch) -->
-    <section class="section" id="programme-section">
-      <h3>Veranstaltungsreihen</h3>
+    <details class="section past-archive" id="programme-section" open>
+      <summary><h3>Veranstaltungsreihen</h3></summary>
       <div id="programme-list"></div>
-    </section>
+    </details>
 
     <br>
     <hr>
@@ -430,7 +430,7 @@
   function render(){
     const { upcoming, past, activeProgrammes } = splitEvents();
 
-    // Laufende Programme
+    // Laufende Programme (details-Element: display:none blendet die ganze Sektion inkl. Klapp-Pfeil aus, wenn leer)
     if(activeProgrammes.length === 0){
       $progSection.style.display = "none";
     } else {

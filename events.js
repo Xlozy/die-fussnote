@@ -57,6 +57,7 @@ window.EVENTS = [
   {
   titel: "Bündelbanden – Unterwegs mit Kollektiv Roscht (Zone A)",
   datum: "2026-06-30",
+  datumEnde: "2026-07-28",
   zeit: "19:00–22:00",
   ort: "Treffpunkt: Abfuhr Zone A, Basel",
   beschr: "Werde Teil einer Bündelbande und entdecke in einem interaktiven Spaziergang die wöchentlich auftauchenden Kartonbündel vor den Haustüren Basels aus einer neuen Perspektive. Zwischen Fiktion und Wirklichkeit spinnen wir eine Geschichte über Bünzlitum, Nachhaltigkeit und die Kunst zu Bündeln. Dieses Larp (live action roleplay) ist ein partizipativ künstlerisches Projekt, in dem die Geschichte der Bündelbanden erlebt und aktiv mitgestaltet wird.\n\nWeitere Termine: Dienstag, 14. Juli (Zone E), Dienstag, 21. Juli (Zone D), Dienstag, 28. Juli (Zone A), jeweils 19.00–22.00 Uhr.\n\nDas Angebot ist kostenlos. Anmeldung über QR-Code bis am Vorabend, Treffpunkt wird per Mail bekanntgegeben. Der Spaziergang endet immer in der Basler Papiermühle.",
@@ -68,7 +69,6 @@ window.EVENTS = [
   region: "basel",
   konzept: false,
   programm: true,
-  datumEnde: "2026-07-28"
 },
 
 {
