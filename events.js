@@ -21,8 +21,42 @@
 
 window.EVENTS = [
   {
+  titel: "Bündelbanden – Karton bündeln als kollektive Praxis (Unterwegs mit Henriette Lutz)",
+  datum: "2025-07-19",
+  zeit: "20:00–21:30",
+  ort: "Haltestelle Steingrubenweg, Riehen",
+  beschr: "Ein experimenteller Wahrnehmungsspaziergang mit Henriette Lutz von Research Walkers.\n\nKarton bündeln als kollektive Praxis\nSonntag, 19. Juli, 20.00–21.30 Uhr\nTreffpunkt: Haltestelle Steingrubenweg in Riehen\n\nDas Angebot ist kostenlos. Anmeldung unter info@baslerpapiermuehle.ch bis am Vorabend.",
+  link: "https://www.baslerpapiermuehle.ch",
+  kosten: "kostenlos",
+  referent: "Henriette Lutz (Research Walkers)",
+  veranstalter: "Basler Papiermühle",
+  kontakt: "info@baslerpapiermuehle.ch",
+  region: "basel",
+  konzept: false,
+  programm: false,
+  datumEnde: ""
+},
+
+  {
+  titel: "Bündelbanden – Kartonbiografien (Unterwegs mit Henriette Lutz)",
+  datum: "2025-07-07",
+  zeit: "20:00–21:30",
+  ort: "Neutraler Quartierverein St. Johann, St. Johannspark 1, 4056 Basel",
+  beschr: "Ein experimenteller Wahrnehmungsspaziergang mit Henriette Lutz von Research Walkers.\n\nKartonbiografien\nDienstag, 7. Juli, 20.00–21.30 Uhr\nTreffpunkt: Neutraler Quartierverein St. Johann, St. Johannspark 1, 4056 Basel\n\nDas Angebot ist kostenlos. Anmeldung unter info@baslerpapiermuehle.ch bis am Vorabend.",
+  link: "https://www.baslerpapiermuehle.ch",
+  kosten: "kostenlos",
+  referent: "Henriette Lutz (Research Walkers)",
+  veranstalter: "Basler Papiermühle",
+  kontakt: "info@baslerpapiermuehle.ch",
+  region: "basel",
+  konzept: false,
+  programm: false,
+  datumEnde: ""
+},
+
+  {
   titel: "Bündelbanden – Unterwegs mit Kollektiv Roscht (Zone A)",
-  datum: "2025-06-30",
+  datum: "2026-06-30",
   zeit: "19:00–22:00",
   ort: "Treffpunkt: Abfuhr Zone A, Basel",
   beschr: "Werde Teil einer Bündelbande und entdecke in einem interaktiven Spaziergang die wöchentlich auftauchenden Kartonbündel vor den Haustüren Basels aus einer neuen Perspektive. Zwischen Fiktion und Wirklichkeit spinnen wir eine Geschichte über Bünzlitum, Nachhaltigkeit und die Kunst zu Bündeln. Dieses Larp (live action roleplay) ist ein partizipativ künstlerisches Projekt, in dem die Geschichte der Bündelbanden erlebt und aktiv mitgestaltet wird.\n\nWeitere Termine: Dienstag, 14. Juli (Zone E), Dienstag, 21. Juli (Zone D), Dienstag, 28. Juli (Zone A), jeweils 19.00–22.00 Uhr.\n\nDas Angebot ist kostenlos. Anmeldung über QR-Code bis am Vorabend, Treffpunkt wird per Mail bekanntgegeben. Der Spaziergang endet immer in der Basler Papiermühle.",
