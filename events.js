@@ -22,7 +22,7 @@
 window.EVENTS = [
   {
   titel: "Bündelbanden – Karton bündeln als kollektive Praxis (Unterwegs mit Henriette Lutz)",
-  datum: "2025-07-19",
+  datum: "2026-07-19",
   zeit: "20:00–21:30",
   ort: "Haltestelle Steingrubenweg, Riehen",
   beschr: "Ein experimenteller Wahrnehmungsspaziergang mit Henriette Lutz von Research Walkers.\n\nKarton bündeln als kollektive Praxis\nSonntag, 19. Juli, 20.00–21.30 Uhr\nTreffpunkt: Haltestelle Steingrubenweg in Riehen\n\nDas Angebot ist kostenlos. Anmeldung unter info@baslerpapiermuehle.ch bis am Vorabend.",
@@ -39,7 +39,7 @@ window.EVENTS = [
 
   {
   titel: "Bündelbanden – Kartonbiografien (Unterwegs mit Henriette Lutz)",
-  datum: "2025-07-07",
+  datum: "2026-07-07",
   zeit: "20:00–21:30",
   ort: "Neutraler Quartierverein St. Johann, St. Johannspark 1, 4056 Basel",
   beschr: "Ein experimenteller Wahrnehmungsspaziergang mit Henriette Lutz von Research Walkers.\n\nKartonbiografien\nDienstag, 7. Juli, 20.00–21.30 Uhr\nTreffpunkt: Neutraler Quartierverein St. Johann, St. Johannspark 1, 4056 Basel\n\nDas Angebot ist kostenlos. Anmeldung unter info@baslerpapiermuehle.ch bis am Vorabend.",
