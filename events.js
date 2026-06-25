@@ -21,6 +21,22 @@
 
 window.EVENTS = [
   {
+  titel: "ir sc'in schnec / Im Schneckengang – ein Slow Walk – lerjentours",
+  datum: "2026-08-09",
+  zeit: "17:00",
+  ort: "Kulturraum CULARTA, Via Falera 2a, Laax",
+  beschr: "Ina spassegiada sc'in schnec! Begeben wir uns auf die Spur der Schnecke führt das zu Verlangsamung. Wer verlangsamt, sieht mehr. lerjentours lädt in Laax zu einem äusserst gemächlichen Seeumgang mit einem Schneckenvorwort.\n\nEin Spaziergang im Rahmen der Ausstellung «Donat Caduff. Observaziuns obsessivas/Besessen betrachtend» im Kulturraum CULARTA in Laax (11. April bis 25. Oktober 2026).\n\nAnschliessend Apéro. Dauer: 1.5 Stunden, bei jedem Wetter. Anmeldung per E-Mail.",
+  link: "https://lerjentours.ch",
+  kosten: "",
+  referent: "",
+  veranstalter: "lerjentours",
+  kontakt: "",
+  region: "anderswo",
+  konzept: false,
+  programm: false,
+  datumEnde: ""
+},
+  {
   titel: "Den Frauen folgen",
   datum: "2026-09-27",
   zeit: "17:00–18:30",
