@@ -133,22 +133,6 @@ window.EVENTS = [
   datumEnde: ""
 },
   {
-  titel: "Jüdisches Leben in Basel – Geschichte und Gegenwart einer reichen Tradition",
-  datum: "2026-09-04",
-  zeit: "10:00–16:45",
-  ort: "Basel",
-  beschr: "Zahlreiche Einrichtungen und bedeutende Ereignisse zeugen von der langen jüdischen Geschichte in Basel. Wie anderswo ist diese Geschichte äusserst wechselhaft. Sie kennt Zeiten kultureller Hochblüte ebenso wie Epochen der Vertreibung der jüdischen Bevölkerung.\nEine erste jüdische Gemeinde kann spätestens seit dem 12. Jahrhundert nachgewiesen werden. Wiederholte Ausbrüche der Pest bestimmen das Schicksal der Juden zwischen Ansiedlung und Vertreibung. Zwischen 1400 und 1800 gibt es keine jüdische Gemeinde in Basel, viele Juden leben im nahen Elsass. In der Gelehrtenwelt erwacht jedoch früh das Interesse an der hebräischen Sprache und Literatur. Um 1500 entwickelt sich Basel zu einem Zentrum des hebräischen Buchdrucks.\nIm 19. Jahrhundert erblüht das jüdische Leben. Nach und nach etablieren sich drei Gemeinden mit unterschiedlicher Ausrichtung. Die liberale Israelitische Gemeinde erbaut die prächtige Synagoge, deren Besichtigung auf dem Programm steht. Im Stadtcasino wird 1897 mit dem ersten Zionistenkongress Geschichte geschrieben. Auch das Schicksal der Familie von Anne Frank prägt die Geschichte. Der Vater Otto Frank, einziger Überlebender, lässt sich in Basel nieder. Die Lesung zum Abschluss der Veranstaltung stellt das Tagebuch von Anne Frank in den Mittelpunkt.\nDer Spaziergang zu ausgewählten Orten sowie der Besuch des neuen Jüdischen Museums und der Synagoge ermöglichen eine umfassende Begegnung mit der jüdischen Kultur.\nAnmeldung: www.kulturclub.ch | 058 134 61 60 (Mo bis Fr vormittags)",
-  link: "https://literaturspur.ch/juedisches-leben-in-basel-geschichte-und-gegenwart-einer-reichen-tradition/",
-  kosten: "160 CHF",
-  referent: "",
-  veranstalter: "Literatur|spur in Kooperation mit dem SRF Kulturclub",
-  kontakt: "info@literaturspur.ch",
-  region: "basel",
-  konzept: false,
-  programm: false,
-  datumEnde: ""
-},
-  {
   titel: "Adelheid Duvanel",
   datum: "2026-08-30",
   zeit: "11:00–12:30",
