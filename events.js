@@ -20,6 +20,54 @@
 
 
 window.EVENTS = [
+
+  {
+  titel: "flanie® mal marburg – die pe®pipat[h]et[h]ische schule",
+  datum: "2026-08-24",
+  datumEnde: "2026-10-02",
+  ort: "Marburg",
+  beschr: "Neun Spaziergänge wöchentlich, im Juni. Der Künstler Konstantinos-Antonios Goutos lädt zum Flanieren ein: Von «StraßenGriechisch für Anfänger», über «Und wo kommst du eigentlich her?» bis «Wald fühlen gehen».",
+  link: "https://konstantinosantoniosgoutos.art.blog/",
+  veranstalter: "Konstantinos Antonios Goutos",
+  region: "anderswo",
+  konzept: false,
+  programm: true
+},
+
+{
+  titel: "Poesiespaziergang mit Musik",
+  datum: "2026-09-20",
+  zeit: "14:00–16:00",
+  ort: "Museum Allschwil – Haus für Kultur und Geschichte, Baslerstrasse 48, 4123 Allschwil",
+  beschr: "Bis Mitte des 19. Jahrhunderts durften Jüdinnen und Juden nicht in Basel wohnen. Viele von ihnen pendelten gezwungenermassen über die ‹Judengasse› in die Stadt. Auf diesem historischen Weg liest Victor Saudan Gedichte vor, die Topos und Poesie verbinden. Dabei wird er vom Komponisten und Musiker Philippe Koerper musikalisch begleitet. Der Spaziergang dauert ca. 90 Minuten. Wer nach Allschwil zurück möchte, muss nochmals ca. 30 Minuten für den Rückweg einplanen. Pass oder ID mitnehmen!",
+  link: "https://museumallschwil.ch",
+  kosten: "CHF 10 / CHF 15, Reservation empfohlen",
+  referent: "Victor Saudan, Philippe Koerper",
+  veranstalter: "Museum Allschwil – Haus für Kultur und Geschichte",
+  kontakt: "museumallschwil@allschwil.bl.ch",
+  region: "basel",
+  konzept: false,
+  programm: false,
+  datumEnde: ""
+},
+
+{
+  titel: "The Long Way Home",
+  datum: "2026-10-09",
+  zeit: "ab 22:00",
+  ort: "Dreirosen park (gegenüber Tramhaltestelle 8), Basel",
+  beschr: "The Long Way Home is a collective act of strolling. An intimate ritual. An ode to the detour. We'll meet on October 9, 2026, at 10:00 p.m. at the start of the Dreirosen park (across from tram stop 8) and walk each other home, one by one. At each home, we'll take a short (or longer, if needed) break to warm up and have a light snack before heading back out onto the street. It's possible that we'll all be back home after three hours—but we might also keep going until dawn. Basically, stamina and a willingness to endure a potentially sleepless night are welcome. But if it gets to be too much, too cold, or too exhausting along the way, you're of course welcome to drop out early (or take a power nap at the next stop). It's important to bring warm clothes for the cool night and comfortable running shoes. It would also be nice if every participant were willing to offer a moment of hospitality and a small snack at their home—this isn't about fancy homes or special delicacies, but rather about basic refreshment.",
+  link: "",
+  kosten: "",
+  referent: "",
+  veranstalter: "",
+  kontakt: "",
+  region: "basel",
+  konzept: false,
+  programm: false,
+  datumEnde: ""
+},
+
   {
   titel: "ir sc'in schnec / Im Schneckengang – ein Slow Walk – lerjentours",
   datum: "2026-08-09",
